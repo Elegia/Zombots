@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FE4BE5DE1375C57C00C857E6 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4BE5DC1375C57C00C857E6 /* World.cpp */; };
+		FE4BE5E11375C58600C857E6 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4BE5DF1375C58500C857E6 /* Game.cpp */; };
+		FE4BE5E41375C88400C857E6 /* RoboGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4BE5E21375C88400C857E6 /* RoboGame.cpp */; };
+		FE4BE5E71375CE8000C857E6 /* RoboSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4BE5E51375CE8000C857E6 /* RoboSprite.cpp */; };
+		FE985EBC1375724A00BD2A34 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE985EBB1375724A00BD2A34 /* CoreFoundation.framework */; };
+		FE985EBE1375738100BD2A34 /* bullet_blue.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B8F1370872000D6F63B /* bullet_blue.png */; };
+		FE985EBF1375738100BD2A34 /* bullet_red.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B901370872000D6F63B /* bullet_red.png */; };
+		FE985EC01375738100BD2A34 /* ledge_1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B911370872000D6F63B /* ledge_1.png */; };
+		FE985EC11375738100BD2A34 /* minion_melee_blue.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B921370872000D6F63B /* minion_melee_blue.png */; };
+		FE985EC21375738100BD2A34 /* minion_melee_red.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B931370872000D6F63B /* minion_melee_red.png */; };
+		FE985EC31375738100BD2A34 /* tower_blue_selected.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B941370872000D6F63B /* tower_blue_selected.png */; };
+		FE985EC41375738100BD2A34 /* tower_blue.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B951370872000D6F63B /* tower_blue.png */; };
+		FE985EC51375738100BD2A34 /* Tower_red_selected.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B961370872000D6F63B /* Tower_red_selected.png */; };
+		FE985EC61375738100BD2A34 /* tower_red.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B971370872000D6F63B /* tower_red.png */; };
+		FEA35B811370829200D6F63B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B801370829200D6F63B /* main.cpp */; };
+		FEA35B87137082B900D6F63B /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B86137082B900D6F63B /* SFML.framework */; };
+		FEA35B8B137082EB00D6F63B /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B88137082EB00D6F63B /* sfml-graphics.framework */; };
+		FEA35B8C137082EB00D6F63B /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B89137082EB00D6F63B /* sfml-system.framework */; };
+		FEA35B8D137082EB00D6F63B /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B8A137082EB00D6F63B /* sfml-window.framework */; };
+		FEA35B9A1370894700D6F63B /* RoboEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B991370894700D6F63B /* RoboEngine.cpp */; };
+		FEE4B752137DB10C00C68181 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEE4B750137DB10B00C68181 /* Player.cpp */; };
+		FEE6239B137ED31700CD8081 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEE62399137ED31700CD8081 /* Bullet.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FEA35B7A1370829200D6F63B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = resources;
+			dstSubfolderSpec = 16;
+			files = (
+				FE985EBE1375738100BD2A34 /* bullet_blue.png in CopyFiles */,
+				FE985EBF1375738100BD2A34 /* bullet_red.png in CopyFiles */,
+				FE985EC01375738100BD2A34 /* ledge_1.png in CopyFiles */,
+				FE985EC11375738100BD2A34 /* minion_melee_blue.png in CopyFiles */,
+				FE985EC21375738100BD2A34 /* minion_melee_red.png in CopyFiles */,
+				FE985EC31375738100BD2A34 /* tower_blue_selected.png in CopyFiles */,
+				FE985EC41375738100BD2A34 /* tower_blue.png in CopyFiles */,
+				FE985EC51375738100BD2A34 /* Tower_red_selected.png in CopyFiles */,
+				FE985EC61375738100BD2A34 /* tower_red.png in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		FE4BE5DC1375C57C00C857E6 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = World.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/World.cpp; sourceTree = "<group>"; };
+		FE4BE5DD1375C57C00C857E6 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = /Users/maarten/Desktop/SFMLTest/Robodota/World.h; sourceTree = "<absolute>"; };
+		FE4BE5DF1375C58500C857E6 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Game.cpp; sourceTree = "<group>"; };
+		FE4BE5E01375C58600C857E6 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Game.h; sourceTree = "<group>"; };
+		FE4BE5E21375C88400C857E6 /* RoboGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboGame.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/RoboGame.cpp; sourceTree = "<group>"; };
+		FE4BE5E31375C88400C857E6 /* RoboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboGame.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/RoboGame.h; sourceTree = "<group>"; };
+		FE4BE5E51375CE8000C857E6 /* RoboSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboSprite.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/RoboSprite.cpp; sourceTree = "<group>"; };
+		FE4BE5E61375CE8000C857E6 /* RoboSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboSprite.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/RoboSprite.h; sourceTree = "<group>"; };
+		FE985EBB1375724A00BD2A34 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		FEA35B7C1370829200D6F63B /* Robodota */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Robodota; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEA35B801370829200D6F63B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FEA35B821370829200D6F63B /* Robodota.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Robodota.1; sourceTree = "<group>"; };
+		FEA35B86137082B900D6F63B /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = SDKs/MacOSX10.6.sdk/Library/Frameworks/SFML.framework; sourceTree = DEVELOPER_DIR; };
+		FEA35B88137082EB00D6F63B /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		FEA35B89137082EB00D6F63B /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		FEA35B8A137082EB00D6F63B /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
+		FEA35B8F1370872000D6F63B /* bullet_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet_blue.png; path = Resources/bullet_blue.png; sourceTree = "<group>"; };
+		FEA35B901370872000D6F63B /* bullet_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet_red.png; path = Resources/bullet_red.png; sourceTree = "<group>"; };
+		FEA35B911370872000D6F63B /* ledge_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ledge_1.png; path = Resources/ledge_1.png; sourceTree = "<group>"; };
+		FEA35B921370872000D6F63B /* minion_melee_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minion_melee_blue.png; path = Resources/minion_melee_blue.png; sourceTree = "<group>"; };
+		FEA35B931370872000D6F63B /* minion_melee_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = minion_melee_red.png; path = Resources/minion_melee_red.png; sourceTree = "<group>"; };
+		FEA35B941370872000D6F63B /* tower_blue_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tower_blue_selected.png; path = Resources/tower_blue_selected.png; sourceTree = "<group>"; };
+		FEA35B951370872000D6F63B /* tower_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tower_blue.png; path = Resources/tower_blue.png; sourceTree = "<group>"; };
+		FEA35B961370872000D6F63B /* Tower_red_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tower_red_selected.png; path = Resources/Tower_red_selected.png; sourceTree = "<group>"; };
+		FEA35B971370872000D6F63B /* tower_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tower_red.png; path = Resources/tower_red.png; sourceTree = "<group>"; };
+		FEA35B98137088F000D6F63B /* RoboEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboEngine.h; sourceTree = "<group>"; };
+		FEA35B991370894700D6F63B /* RoboEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoboEngine.cpp; sourceTree = "<group>"; };
+		FEE4B750137DB10B00C68181 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Player.cpp; sourceTree = "<group>"; };
+		FEE4B751137DB10B00C68181 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Player.h; sourceTree = "<group>"; };
+		FEE62399137ED31700CD8081 /* Bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bullet.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Bullet.cpp; sourceTree = "<group>"; };
+		FEE6239A137ED31700CD8081 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Bullet.h; sourceTree = "<group>"; };
+		FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboUtil.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FEA35B791370829200D6F63B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE985EBC1375724A00BD2A34 /* CoreFoundation.framework in Frameworks */,
+				FEA35B8B137082EB00D6F63B /* sfml-graphics.framework in Frameworks */,
+				FEA35B8C137082EB00D6F63B /* sfml-system.framework in Frameworks */,
+				FEA35B8D137082EB00D6F63B /* sfml-window.framework in Frameworks */,
+				FEA35B87137082B900D6F63B /* SFML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FE4BE5DA1375BCCD00C857E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				FE4BE5DB1375C48B00C857E6 /* Engine */,
+				FE4BE5DD1375C57C00C857E6 /* World.h */,
+				FE4BE5DC1375C57C00C857E6 /* World.cpp */,
+				FE4BE5E01375C58600C857E6 /* Game.h */,
+				FE4BE5DF1375C58500C857E6 /* Game.cpp */,
+				FEE4B751137DB10B00C68181 /* Player.h */,
+				FEE4B750137DB10B00C68181 /* Player.cpp */,
+				FEE6239A137ED31700CD8081 /* Bullet.h */,
+				FEE62399137ED31700CD8081 /* Bullet.cpp */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		FE4BE5DB1375C48B00C857E6 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				FEA35B98137088F000D6F63B /* RoboEngine.h */,
+				FEA35B991370894700D6F63B /* RoboEngine.cpp */,
+				FE4BE5E31375C88400C857E6 /* RoboGame.h */,
+				FE4BE5E21375C88400C857E6 /* RoboGame.cpp */,
+				FE4BE5E61375CE8000C857E6 /* RoboSprite.h */,
+				FE4BE5E51375CE8000C857E6 /* RoboSprite.cpp */,
+				FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */,
+			);
+			name = Engine;
+			sourceTree = "<group>";
+		};
+		FEA35B6F1370826200D6F63B = {
+			isa = PBXGroup;
+			children = (
+				FE985EBB1375724A00BD2A34 /* CoreFoundation.framework */,
+				FEA35B88137082EB00D6F63B /* sfml-graphics.framework */,
+				FEA35B89137082EB00D6F63B /* sfml-system.framework */,
+				FEA35B8A137082EB00D6F63B /* sfml-window.framework */,
+				FEA35B86137082B900D6F63B /* SFML.framework */,
+				FEA35B7F1370829200D6F63B /* Robodota */,
+				FEA35B7D1370829200D6F63B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FEA35B7D1370829200D6F63B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEA35B7C1370829200D6F63B /* Robodota */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FEA35B7F1370829200D6F63B /* Robodota */ = {
+			isa = PBXGroup;
+			children = (
+				FE4BE5DA1375BCCD00C857E6 /* Classes */,
+				FEA35B8E137086C400D6F63B /* Resources */,
+				FEA35B801370829200D6F63B /* main.cpp */,
+				FEA35B821370829200D6F63B /* Robodota.1 */,
+			);
+			path = Robodota;
+			sourceTree = "<group>";
+		};
+		FEA35B8E137086C400D6F63B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FEA35B8F1370872000D6F63B /* bullet_blue.png */,
+				FEA35B901370872000D6F63B /* bullet_red.png */,
+				FEA35B911370872000D6F63B /* ledge_1.png */,
+				FEA35B921370872000D6F63B /* minion_melee_blue.png */,
+				FEA35B931370872000D6F63B /* minion_melee_red.png */,
+				FEA35B941370872000D6F63B /* tower_blue_selected.png */,
+				FEA35B951370872000D6F63B /* tower_blue.png */,
+				FEA35B961370872000D6F63B /* Tower_red_selected.png */,
+				FEA35B971370872000D6F63B /* tower_red.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FEA35B7B1370829200D6F63B /* Robodota */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEA35B831370829200D6F63B /* Build configuration list for PBXNativeTarget "Robodota" */;
+			buildPhases = (
+				FEA35B781370829200D6F63B /* Sources */,
+				FEA35B791370829200D6F63B /* Frameworks */,
+				FEA35B7A1370829200D6F63B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Robodota;
+			productName = Robodota;
+			productReference = FEA35B7C1370829200D6F63B /* Robodota */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FEA35B711370826200D6F63B /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = FEA35B741370826200D6F63B /* Build configuration list for PBXProject "SFMLTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FEA35B6F1370826200D6F63B;
+			productRefGroup = FEA35B7D1370829200D6F63B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FEA35B7B1370829200D6F63B /* Robodota */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FEA35B781370829200D6F63B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEA35B811370829200D6F63B /* main.cpp in Sources */,
+				FEA35B9A1370894700D6F63B /* RoboEngine.cpp in Sources */,
+				FE4BE5DE1375C57C00C857E6 /* World.cpp in Sources */,
+				FE4BE5E11375C58600C857E6 /* Game.cpp in Sources */,
+				FE4BE5E41375C88400C857E6 /* RoboGame.cpp in Sources */,
+				FE4BE5E71375CE8000C857E6 /* RoboSprite.cpp in Sources */,
+				FEE4B752137DB10C00C68181 /* Player.cpp in Sources */,
+				FEE6239B137ED31700CD8081 /* Bullet.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		FEA35B761370826200D6F63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INSTALL_PATH = /Users/maarten/Desktop/SFMLTest/Robodota;
+			};
+			name = Debug;
+		};
+		FEA35B771370826200D6F63B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		FEA35B841370829200D6F63B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FEA35B851370829200D6F63B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FEA35B741370826200D6F63B /* Build configuration list for PBXProject "SFMLTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEA35B761370826200D6F63B /* Debug */,
+				FEA35B771370826200D6F63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEA35B831370829200D6F63B /* Build configuration list for PBXNativeTarget "Robodota" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEA35B841370829200D6F63B /* Debug */,
+				FEA35B851370829200D6F63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FEA35B711370826200D6F63B /* Project object */;
+}
