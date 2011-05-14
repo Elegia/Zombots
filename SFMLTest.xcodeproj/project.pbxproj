@@ -7,10 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE4BE5DE1375C57C00C857E6 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4BE5DC1375C57C00C857E6 /* World.cpp */; };
-		FE4BE5E11375C58600C857E6 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4BE5DF1375C58500C857E6 /* Game.cpp */; };
-		FE4BE5E41375C88400C857E6 /* RoboGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4BE5E21375C88400C857E6 /* RoboGame.cpp */; };
-		FE4BE5E71375CE8000C857E6 /* RoboSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE4BE5E51375CE8000C857E6 /* RoboSprite.cpp */; };
+		FE7971A1137F347C00C7C444 /* RoboGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE79719D137F347C00C7C444 /* RoboGame.cpp */; };
+		FE7971A2137F347C00C7C444 /* RoboSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE79719F137F347C00C7C444 /* RoboSprite.cpp */; };
+		FE7971A7137F348800C7C444 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A3137F348800C7C444 /* Bullet.cpp */; };
+		FE7971A8137F348800C7C444 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A5137F348800C7C444 /* Game.cpp */; };
+		FE7971AD137F349200C7C444 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A9137F349200C7C444 /* Player.cpp */; };
+		FE7971AE137F349200C7C444 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971AB137F349200C7C444 /* World.cpp */; };
+		FE7971B4137F359600C7C444 /* sfml-audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971AF137F359600C7C444 /* sfml-audio.framework */; };
+		FE7971B5137F359600C7C444 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B0137F359600C7C444 /* sfml-graphics.framework */; };
+		FE7971B6137F359600C7C444 /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B1137F359600C7C444 /* sfml-network.framework */; };
+		FE7971B7137F359600C7C444 /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B2137F359600C7C444 /* sfml-system.framework */; };
+		FE7971B8137F359600C7C444 /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B3137F359600C7C444 /* sfml-window.framework */; };
 		FE985EBC1375724A00BD2A34 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE985EBB1375724A00BD2A34 /* CoreFoundation.framework */; };
 		FE985EBE1375738100BD2A34 /* bullet_blue.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B8F1370872000D6F63B /* bullet_blue.png */; };
 		FE985EBF1375738100BD2A34 /* bullet_red.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B901370872000D6F63B /* bullet_red.png */; };
@@ -23,12 +30,7 @@
 		FE985EC61375738100BD2A34 /* tower_red.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEA35B971370872000D6F63B /* tower_red.png */; };
 		FEA35B811370829200D6F63B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B801370829200D6F63B /* main.cpp */; };
 		FEA35B87137082B900D6F63B /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B86137082B900D6F63B /* SFML.framework */; };
-		FEA35B8B137082EB00D6F63B /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B88137082EB00D6F63B /* sfml-graphics.framework */; };
-		FEA35B8C137082EB00D6F63B /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B89137082EB00D6F63B /* sfml-system.framework */; };
-		FEA35B8D137082EB00D6F63B /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B8A137082EB00D6F63B /* sfml-window.framework */; };
 		FEA35B9A1370894700D6F63B /* RoboEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B991370894700D6F63B /* RoboEngine.cpp */; };
-		FEE4B752137DB10C00C68181 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEE4B750137DB10B00C68181 /* Player.cpp */; };
-		FEE6239B137ED31700CD8081 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEE62399137ED31700CD8081 /* Bullet.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,22 +55,28 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FE4BE5DC1375C57C00C857E6 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = World.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/World.cpp; sourceTree = "<group>"; };
-		FE4BE5DD1375C57C00C857E6 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = /Users/maarten/Desktop/SFMLTest/Robodota/World.h; sourceTree = "<absolute>"; };
-		FE4BE5DF1375C58500C857E6 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Game.cpp; sourceTree = "<group>"; };
-		FE4BE5E01375C58600C857E6 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Game.h; sourceTree = "<group>"; };
-		FE4BE5E21375C88400C857E6 /* RoboGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboGame.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/RoboGame.cpp; sourceTree = "<group>"; };
-		FE4BE5E31375C88400C857E6 /* RoboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboGame.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/RoboGame.h; sourceTree = "<group>"; };
-		FE4BE5E51375CE8000C857E6 /* RoboSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboSprite.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/RoboSprite.cpp; sourceTree = "<group>"; };
-		FE4BE5E61375CE8000C857E6 /* RoboSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboSprite.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/RoboSprite.h; sourceTree = "<group>"; };
+		FE79719D137F347C00C7C444 /* RoboGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboGame.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboGame.cpp; sourceTree = "<group>"; };
+		FE79719E137F347C00C7C444 /* RoboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboGame.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboGame.h; sourceTree = "<group>"; };
+		FE79719F137F347C00C7C444 /* RoboSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboSprite.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboSprite.cpp; sourceTree = "<group>"; };
+		FE7971A0137F347C00C7C444 /* RoboSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboSprite.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboSprite.h; sourceTree = "<group>"; };
+		FE7971A3137F348800C7C444 /* Bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bullet.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Bullet.cpp; sourceTree = "<group>"; };
+		FE7971A4137F348800C7C444 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Bullet.h; sourceTree = "<group>"; };
+		FE7971A5137F348800C7C444 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Game.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Game.cpp; sourceTree = "<group>"; };
+		FE7971A6137F348800C7C444 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Game.h; sourceTree = "<group>"; };
+		FE7971A9137F349200C7C444 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Player.cpp; sourceTree = "<group>"; };
+		FE7971AA137F349200C7C444 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Player.h; sourceTree = "<group>"; };
+		FE7971AB137F349200C7C444 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = World.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/World.cpp; sourceTree = "<group>"; };
+		FE7971AC137F349200C7C444 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/World.h; sourceTree = "<group>"; };
+		FE7971AF137F359600C7C444 /* sfml-audio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-audio.framework"; path = "../../../../../../../Library/Frameworks/sfml-audio.framework"; sourceTree = "<group>"; };
+		FE7971B0137F359600C7C444 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../../../../Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		FE7971B1137F359600C7C444 /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "../../../../../../../Library/Frameworks/sfml-network.framework"; sourceTree = "<group>"; };
+		FE7971B2137F359600C7C444 /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		FE7971B3137F359600C7C444 /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
 		FE985EBB1375724A00BD2A34 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = SDKs/MacOSX10.6.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		FEA35B7C1370829200D6F63B /* Robodota */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Robodota; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEA35B801370829200D6F63B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		FEA35B821370829200D6F63B /* Robodota.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Robodota.1; sourceTree = "<group>"; };
 		FEA35B86137082B900D6F63B /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = SDKs/MacOSX10.6.sdk/Library/Frameworks/SFML.framework; sourceTree = DEVELOPER_DIR; };
-		FEA35B88137082EB00D6F63B /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
-		FEA35B89137082EB00D6F63B /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
-		FEA35B8A137082EB00D6F63B /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
 		FEA35B8F1370872000D6F63B /* bullet_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet_blue.png; path = Resources/bullet_blue.png; sourceTree = "<group>"; };
 		FEA35B901370872000D6F63B /* bullet_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet_red.png; path = Resources/bullet_red.png; sourceTree = "<group>"; };
 		FEA35B911370872000D6F63B /* ledge_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ledge_1.png; path = Resources/ledge_1.png; sourceTree = "<group>"; };
@@ -80,10 +88,6 @@
 		FEA35B971370872000D6F63B /* tower_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tower_red.png; path = Resources/tower_red.png; sourceTree = "<group>"; };
 		FEA35B98137088F000D6F63B /* RoboEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboEngine.h; sourceTree = "<group>"; };
 		FEA35B991370894700D6F63B /* RoboEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoboEngine.cpp; sourceTree = "<group>"; };
-		FEE4B750137DB10B00C68181 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Player.cpp; sourceTree = "<group>"; };
-		FEE4B751137DB10B00C68181 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Player.h; sourceTree = "<group>"; };
-		FEE62399137ED31700CD8081 /* Bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bullet.cpp; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Bullet.cpp; sourceTree = "<group>"; };
-		FEE6239A137ED31700CD8081 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Bullet.h; path = ../../../../../Users/maarten/Desktop/SFMLTest/Robodota/Bullet.h; sourceTree = "<group>"; };
 		FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,10 +96,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE7971B4137F359600C7C444 /* sfml-audio.framework in Frameworks */,
+				FE7971B5137F359600C7C444 /* sfml-graphics.framework in Frameworks */,
+				FE7971B6137F359600C7C444 /* sfml-network.framework in Frameworks */,
+				FE7971B7137F359600C7C444 /* sfml-system.framework in Frameworks */,
+				FE7971B8137F359600C7C444 /* sfml-window.framework in Frameworks */,
 				FE985EBC1375724A00BD2A34 /* CoreFoundation.framework in Frameworks */,
-				FEA35B8B137082EB00D6F63B /* sfml-graphics.framework in Frameworks */,
-				FEA35B8C137082EB00D6F63B /* sfml-system.framework in Frameworks */,
-				FEA35B8D137082EB00D6F63B /* sfml-window.framework in Frameworks */,
 				FEA35B87137082B900D6F63B /* SFML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,15 +112,15 @@
 		FE4BE5DA1375BCCD00C857E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FE7971A9137F349200C7C444 /* Player.cpp */,
+				FE7971AA137F349200C7C444 /* Player.h */,
+				FE7971AB137F349200C7C444 /* World.cpp */,
+				FE7971AC137F349200C7C444 /* World.h */,
+				FE7971A3137F348800C7C444 /* Bullet.cpp */,
+				FE7971A4137F348800C7C444 /* Bullet.h */,
+				FE7971A5137F348800C7C444 /* Game.cpp */,
+				FE7971A6137F348800C7C444 /* Game.h */,
 				FE4BE5DB1375C48B00C857E6 /* Engine */,
-				FE4BE5DD1375C57C00C857E6 /* World.h */,
-				FE4BE5DC1375C57C00C857E6 /* World.cpp */,
-				FE4BE5E01375C58600C857E6 /* Game.h */,
-				FE4BE5DF1375C58500C857E6 /* Game.cpp */,
-				FEE4B751137DB10B00C68181 /* Player.h */,
-				FEE4B750137DB10B00C68181 /* Player.cpp */,
-				FEE6239A137ED31700CD8081 /* Bullet.h */,
-				FEE62399137ED31700CD8081 /* Bullet.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -122,12 +128,12 @@
 		FE4BE5DB1375C48B00C857E6 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				FE79719D137F347C00C7C444 /* RoboGame.cpp */,
+				FE79719E137F347C00C7C444 /* RoboGame.h */,
+				FE79719F137F347C00C7C444 /* RoboSprite.cpp */,
+				FE7971A0137F347C00C7C444 /* RoboSprite.h */,
 				FEA35B98137088F000D6F63B /* RoboEngine.h */,
 				FEA35B991370894700D6F63B /* RoboEngine.cpp */,
-				FE4BE5E31375C88400C857E6 /* RoboGame.h */,
-				FE4BE5E21375C88400C857E6 /* RoboGame.cpp */,
-				FE4BE5E61375CE8000C857E6 /* RoboSprite.h */,
-				FE4BE5E51375CE8000C857E6 /* RoboSprite.cpp */,
 				FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */,
 			);
 			name = Engine;
@@ -136,10 +142,12 @@
 		FEA35B6F1370826200D6F63B = {
 			isa = PBXGroup;
 			children = (
+				FE7971AF137F359600C7C444 /* sfml-audio.framework */,
+				FE7971B0137F359600C7C444 /* sfml-graphics.framework */,
+				FE7971B1137F359600C7C444 /* sfml-network.framework */,
+				FE7971B2137F359600C7C444 /* sfml-system.framework */,
+				FE7971B3137F359600C7C444 /* sfml-window.framework */,
 				FE985EBB1375724A00BD2A34 /* CoreFoundation.framework */,
-				FEA35B88137082EB00D6F63B /* sfml-graphics.framework */,
-				FEA35B89137082EB00D6F63B /* sfml-system.framework */,
-				FEA35B8A137082EB00D6F63B /* sfml-window.framework */,
 				FEA35B86137082B900D6F63B /* SFML.framework */,
 				FEA35B7F1370829200D6F63B /* Robodota */,
 				FEA35B7D1370829200D6F63B /* Products */,
@@ -230,12 +238,12 @@
 			files = (
 				FEA35B811370829200D6F63B /* main.cpp in Sources */,
 				FEA35B9A1370894700D6F63B /* RoboEngine.cpp in Sources */,
-				FE4BE5DE1375C57C00C857E6 /* World.cpp in Sources */,
-				FE4BE5E11375C58600C857E6 /* Game.cpp in Sources */,
-				FE4BE5E41375C88400C857E6 /* RoboGame.cpp in Sources */,
-				FE4BE5E71375CE8000C857E6 /* RoboSprite.cpp in Sources */,
-				FEE4B752137DB10C00C68181 /* Player.cpp in Sources */,
-				FEE6239B137ED31700CD8081 /* Bullet.cpp in Sources */,
+				FE7971A1137F347C00C7C444 /* RoboGame.cpp in Sources */,
+				FE7971A2137F347C00C7C444 /* RoboSprite.cpp in Sources */,
+				FE7971A7137F348800C7C444 /* Bullet.cpp in Sources */,
+				FE7971A8137F348800C7C444 /* Game.cpp in Sources */,
+				FE7971AD137F349200C7C444 /* Player.cpp in Sources */,
+				FE7971AE137F349200C7C444 /* World.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
