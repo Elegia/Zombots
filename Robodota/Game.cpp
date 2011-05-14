@@ -41,58 +41,56 @@ void Game::handleInput(const sf::Input &input)
     float rico = atan2(mousePoint.y - playerPoint.y, mousePoint.x - playerPoint.x);
     
     
-    //sf::Vector2f directionVector;
-    //directionVector.x = (mousePoint.x - playerPoint.x);
-    //directionVector.y = (mousePoint.y - playerPoint.y);
-    //float m = directionVector.y / directionVector.x;
-    
-    
     // Keyboard
     if (input.IsKeyDown(sf::Key::W))
+    {   
+        _player->setxVelocity(cosf(rico) * _player->getSpeed());
+        _player->setyVelocity(sinf(rico) * _player->getSpeed());
+    }
+    
+    if (input.IsKeyDown(sf::Key::S))
     {
-        // North
-        //_player->setyVelocity(-1.0);
         
-        _player->setxVelocity(cosf(rico) * 1.5);
-        _player->setyVelocity(sinf(rico) * 1.5);
+        _player->setxVelocity(cosf(rico) * _player->getSpeed() * -1);
+        _player->setyVelocity(sinf(rico) * _player->getSpeed() * -1);
     }
-    /*
-    else if (input.IsKeyDown(sf::Key::S))
-    {
-        // South
-        _player->setyVelocity(1.0);
-    }
-    else if (input.IsKeyDown(sf::Key::A))
-    {
-        // West
-        _player->setxVelocity(-1.0);
-    }
-    else if (input.IsKeyDown(sf::Key::D))
-    {
-        // East
-        _player->setxVelocity(1.0);   
-    }
-    else
-    {
-        _player->setyVelocity(0);
-    }
-
     
     if (input.IsKeyDown(sf::Key::A))
-    {
-        // West
-        _player->setxVelocity(-1.0);
+    {    
+        float deltaX = playerPoint.x - mousePoint.x;
+        float deltaY = playerPoint.y - mousePoint.y;
+        float cos = cosf(RoboUtil::toRadians(5));
+        float sin = sinf(RoboUtil::toRadians(5));
+        
+        _player->getSprite().SetPosition( (mousePoint.x + deltaX * cos - deltaY * sin), 
+                                         (mousePoint.y + deltaY * cos + deltaX * sin));
     }
-    else if (input.IsKeyDown(sf::Key::D))
+    
+    if (input.IsKeyDown(sf::Key::D))
     {
-        // East
-        _player->setxVelocity(1.0);   
+        float deltaX = playerPoint.x - mousePoint.x;
+        float deltaY = playerPoint.y - mousePoint.y;
+        float cos = cosf(RoboUtil::toRadians(-5));
+        float sin = sinf(RoboUtil::toRadians(-5));
+        
+        _player->getSprite().SetPosition( (mousePoint.x + deltaX * cos - deltaY * sin), 
+                                         (mousePoint.y + deltaY * cos + deltaX * sin));
     }
-    else
+    
+    if (! input.IsKeyDown(sf::Key::W) && ! input.IsKeyDown(sf::Key::S) && 
+        ! input.IsKeyDown(sf::Key::A) && ! input.IsKeyDown(sf::Key::D))
     {
         _player->setxVelocity(0);
+        _player->setyVelocity(0); 
     }
-    */
+    
+    // Mouse buttons
+    
+    if (input.IsMouseButtonDown(sf::Mouse::Left))
+    {
+        _player->fire(rico);
+    }
+
 }
 
 void Game::update()
@@ -102,5 +100,7 @@ void Game::update()
 
 void Game::draw()
 {
-    _roboEngine->draw( _player->getSprite() );
+    _player->draw(_roboEngine);
+    
+    //_roboEngine->draw( _player->getSprite() );
 }

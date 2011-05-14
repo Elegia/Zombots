@@ -15,7 +15,10 @@ RoboEngine::RoboEngine()
 
 int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboGame *roboGame)
 {
-    renderWindow = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight, bpp), "SFML Window");
+    renderWindow = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight, bpp), "Zombots from Outer Space", sf::Style::Resize | sf::Style::Close, sf::WindowSettings(32, 8, 0));
+    
+    renderWindow->UseVerticalSync(true);
+    renderWindow->SetFramerateLimit(60);
     
     // Start the main loop
     while (renderWindow->IsOpened())
@@ -40,7 +43,7 @@ int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboGame *roboG
         
         roboGame->update();
         
-        renderWindow->Clear();
+        renderWindow->Clear(sf::Color::White);
         
         roboGame->draw();
         

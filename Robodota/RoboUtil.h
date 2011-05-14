@@ -8,21 +8,20 @@
 
 #include <SFML/Graphics.hpp>
 
-/*
-void toRadians(float const degrees)
-{
-    
-}
-
-void toDegrees(float const radians)
-{
-    
-}
-*/
-
 class RoboUtil
 {
 public:
+    
+    static float toRadians(float const degrees)
+    {
+        return (degrees * (M_PI / 180));
+    }
+    
+    static float toDegrees(float const radians)
+    {
+        return (radians * (180 / M_PI));
+    }
+    
     static float getAngle(sf::Vector2f const point1, sf::Vector2f const point2)
     {
         sf::Vector2f supportVector;

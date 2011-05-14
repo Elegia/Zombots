@@ -10,7 +10,7 @@
 
 class World {
   
-    std::vector<RoboSprite> elements;
+    std::vector<RoboSprite> *elements;
     
 public:
     World();

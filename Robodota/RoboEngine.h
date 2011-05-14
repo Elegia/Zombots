@@ -27,9 +27,9 @@ public:
     
     int init(int screenWidth, int screenHeight, int bpp, RoboGame *roboGame);
     
-    sf::Image* getTextureByName(std::string const &name);
-    RoboSprite* getSpriteWithImage(const sf::Image &image);
-    RoboSprite* getSpriteByName(std::string const &name);
+    static sf::Image* getTextureByName(std::string const &name);
+    static RoboSprite* getSpriteWithImage(const sf::Image &image);
+    static RoboSprite* getSpriteByName(std::string const &name);
     
     void addImageToCache(std::string const &name, sf::Image const &image);
     void removeImageFromCache(std::string const &name);
