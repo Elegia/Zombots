@@ -22,6 +22,9 @@ class RoboEngine {
     
     std::map<std::string, sf::Image> imageCache;
     
+    int _screenWidth;
+    int _screenHeight;
+    
 public:
     RoboEngine();
     
@@ -35,6 +38,8 @@ public:
     void removeImageFromCache(std::string const &name);
     
     void draw(RoboSprite const &sprite);
+    
+    sf::Vector2f getScreenSize() const;
     
 };
     

@@ -101,6 +101,4 @@ void Game::update()
 void Game::draw()
 {
     _player->draw(_roboEngine);
-    
-    //_roboEngine->draw( _player->getSprite() );
 }

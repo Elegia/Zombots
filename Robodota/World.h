@@ -6,14 +6,19 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RoboEngine.h"
+#include "RoboEntity.h"
 
 class World {
-  
-    std::vector<RoboSprite> *elements;
+    
+    RoboEntity *_entities;
+    int _lastUsedEntityIndex;
     
 public:
     World();
-    void createWorld();
+    ~World();
     
+    void draw(RoboEngine *roboEngine) const;
+    
+    void addEntity(RoboEntity &entity);
+    void removeEntity(RoboEntity &entity);
 };

@@ -21,6 +21,4 @@ public:
     void handleInput(const sf::Input &input);
     void update();
     void draw();
-    
-    
 };

@@ -17,6 +17,9 @@ int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboGame *roboG
 {
     renderWindow = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight, bpp), "Zombots from Outer Space", sf::Style::Resize | sf::Style::Close, sf::WindowSettings(32, 8, 0));
     
+    _screenWidth = screenWidth;
+    _screenHeight = screenHeight;
+    
     renderWindow->UseVerticalSync(true);
     renderWindow->SetFramerateLimit(60);
     
@@ -92,4 +95,13 @@ void RoboEngine::removeImageFromCache(std::string const &name)
 void RoboEngine::draw(RoboSprite const &sprite)
 {
     renderWindow->Draw(sprite);
+}
+
+sf::Vector2f RoboEngine::getScreenSize() const
+{
+    sf::Vector2f screenSize;
+    screenSize.x = _screenWidth;
+    screenSize.y = _screenHeight;
+    
+    return screenSize;
 }
