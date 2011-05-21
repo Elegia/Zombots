@@ -6,11 +6,15 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#include "Game.h"
 #include "RoboEngine.h"
 #include "RoboSprite.h"
 #include "RoboUtil.h"
 #include "Player.h"
+#include "World.h"
+#include "Spawner.h"
+
+#include "Game.h"
+
 
 Game::Game(RoboEngine *engine)
 {
@@ -27,16 +31,17 @@ Game::Game(RoboEngine *engine)
     _player = new Player();
     _player->setSprite(*sprite);
     
-    /*
+    
     _world = new World();
     
     // Create a spawner
     
     RoboSprite *spawnSprite = _roboEngine->getSpriteByName("resources/block_orange.png");
     Spawner *spawner = new Spawner(*spawnSprite);
+    spawner->getSprite().SetPosition(300, 300);
 
-    _world->addEntity(*spawner);
-    */
+    _world->addEntity(spawner);
+    
 }
 
 void Game::handleInput(const sf::Input &input)
@@ -110,9 +115,11 @@ void Game::handleInput(const sf::Input &input)
 void Game::update()
 {
     _player->update();
+    _world->update();
 }
 
 void Game::draw()
 {
     _player->draw(_roboEngine);
+    _world->draw(_roboEngine);
 }

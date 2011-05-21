@@ -6,15 +6,17 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-class RoboEntity;
+#include "RoboEntity.h"
 
 class Spawner : public RoboEntity
 {
-  
+    sf::Clock _clock;
+    float _elapsedTime;
+    
 public:
     Spawner();
     Spawner(RoboSprite &sprite);
     ~Spawner();
     
-    void spawnEnemy();
+    void update();
 };

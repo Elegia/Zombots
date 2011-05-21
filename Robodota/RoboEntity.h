@@ -6,6 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+
 class RoboEngine;
 class RoboSprite;
 
@@ -18,7 +21,7 @@ public:
     RoboEntity(RoboSprite &sprite);
     ~RoboEntity();
     
-    void update();
+    virtual void update();
     void draw(RoboEngine *engine) const;
     
     RoboSprite& getSprite() const;

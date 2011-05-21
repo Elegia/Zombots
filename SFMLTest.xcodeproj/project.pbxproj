@@ -35,6 +35,8 @@
 		FEA35B811370829200D6F63B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B801370829200D6F63B /* main.cpp */; };
 		FEA35B87137082B900D6F63B /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B86137082B900D6F63B /* SFML.framework */; };
 		FEA35B9A1370894700D6F63B /* RoboEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B991370894700D6F63B /* RoboEngine.cpp */; };
+		FEE982EF1387DB45000E4765 /* block_orange.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE5F7764137FDD47003D6C9C /* block_orange.png */; };
+		FEE982F01387DB45000E4765 /* block_yellow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE5F7765137FDD47003D6C9C /* block_yellow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +46,8 @@
 			dstPath = resources;
 			dstSubfolderSpec = 16;
 			files = (
+				FEE982EF1387DB45000E4765 /* block_orange.png in CopyFiles */,
+				FEE982F01387DB45000E4765 /* block_yellow.png in CopyFiles */,
 				FE985EBE1375738100BD2A34 /* bullet_blue.png in CopyFiles */,
 				FE985EBF1375738100BD2A34 /* bullet_red.png in CopyFiles */,
 				FE985EC01375738100BD2A34 /* ledge_1.png in CopyFiles */,
@@ -126,6 +130,7 @@
 		FE4BE5DA1375BCCD00C857E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FEA35B801370829200D6F63B /* main.cpp */,
 				FE5F7771137FE160003D6C9C /* World */,
 				FE5F7770137FE0FC003D6C9C /* Humanoids */,
 				FE7971A3137F348800C7C444 /* Bullet.cpp */,
@@ -140,8 +145,8 @@
 		FE4BE5DB1375C48B00C857E6 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				FEA35B98137088F000D6F63B /* RoboEngine.h */,
 				FEA35B991370894700D6F63B /* RoboEngine.cpp */,
+				FEA35B98137088F000D6F63B /* RoboEngine.h */,
 				FE79719D137F347C00C7C444 /* RoboGame.cpp */,
 				FE79719E137F347C00C7C444 /* RoboGame.h */,
 				FE79719F137F347C00C7C444 /* RoboSprite.cpp */,
@@ -205,7 +210,6 @@
 			children = (
 				FE4BE5DA1375BCCD00C857E6 /* Classes */,
 				FEA35B8E137086C400D6F63B /* Resources */,
-				FEA35B801370829200D6F63B /* main.cpp */,
 				FEA35B821370829200D6F63B /* Robodota.1 */,
 			);
 			path = Robodota;

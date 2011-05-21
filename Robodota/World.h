@@ -11,15 +11,16 @@ class RoboEntity;
 
 class World {
     
-    RoboEntity *_entities;
+    RoboEntity **_entities;
     int _lastUsedEntityIndex;
     
 public:
     World();
     ~World();
     
+    void update();
     void draw(RoboEngine *roboEngine) const;
     
-    void addEntity(RoboEntity &entity);
-    void removeEntity(RoboEntity &entity);
+    void addEntity(RoboEntity *entity);
+    void removeEntity(RoboEntity *entity);
 };

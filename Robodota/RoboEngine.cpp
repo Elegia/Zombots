@@ -6,6 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#include <iostream.h>
 #include "RoboEngine.h"
 #include "RoboGame.h"
 #include "RoboSprite.h"
@@ -64,7 +65,7 @@ sf::Image* RoboEngine::getTextureByName(std::string const &name)
     sf::Image *image = new sf::Image();
     if (! image->LoadFromFile(name))
     {
-        
+        cout << "Could not load image " << name << " in getTextureByName.\n";
     }
     return image;
 }

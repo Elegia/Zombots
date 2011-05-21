@@ -25,7 +25,7 @@ Humanoid::Humanoid()
 Humanoid::~Humanoid()
 {
     delete _bullets;
-    #warning where does sprite come from?
+    #warning is _sprite certainly initialized when we get here?
     delete _sprite; 
 }
 
@@ -107,7 +107,6 @@ const float Humanoid::getyVelocity() const
 {
     return _yVelocity;
 }
-
 
 void Humanoid::setyVelocity(float yVelocity)
 {

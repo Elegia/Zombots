@@ -7,9 +7,6 @@
 //
 
 
-//#include "Spawner.h"
-//#include "World.h"
-
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
@@ -18,12 +15,13 @@
 class RoboEngine;
 class RoboSprite;
 class Player;
+class World;
 
 class Game : public RoboGame {
   
     RoboEngine *_roboEngine;
     
-    //World *_world;
+    World *_world;
     Player *_player;
     
 public:

@@ -7,7 +7,6 @@
 //
 
 #include "Humanoid.h"
-//class Humanoid;
 
 class Player : public Humanoid {
     
