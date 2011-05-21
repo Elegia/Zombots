@@ -16,7 +16,7 @@ class Bullet : public RoboEntity
     
 public:
     
-    Bullet();
+    Bullet(RoboGame *game);
     ~Bullet();
     
     void update();

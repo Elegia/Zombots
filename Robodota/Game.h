@@ -15,13 +15,9 @@
 class RoboEngine;
 class RoboSprite;
 class Player;
-class World;
 
 class Game : public RoboGame {
-  
-    RoboEngine *_roboEngine;
     
-    World *_world;
     Player *_player;
     
 public:

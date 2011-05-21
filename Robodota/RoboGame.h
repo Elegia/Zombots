@@ -8,16 +8,28 @@
 
 #include <SFML/Graphics.hpp>
 
+class RoboEngine;
+class RoboEntity;
+
 class RoboGame {
 
+    RoboEngine *_roboEngine;
+    
+    RoboEntity **_entities;
+    int _lastUsedEntityIndex;
     
 public:
-    RoboGame();
+    RoboGame(RoboEngine* engine);
+    ~RoboGame();
     
     virtual void handleInput(const sf::Input &input);
     virtual void update();
     virtual void draw();
     
+    RoboEngine* getEngine();
+    
+    void addEntity(RoboEntity* const entity);
+    void removeEntity(RoboEntity* const entity);
 };
 
 

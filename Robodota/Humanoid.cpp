@@ -10,11 +10,11 @@
 #include "Bullet.h"
 #include "RoboEngine.h"
 #include "RoboSprite.h"
-
+#include "RoboGame.h"
 #include "Humanoid.h"
 
 
-Humanoid::Humanoid()
+Humanoid::Humanoid(RoboGame *game) : RoboEntity(game)
 {
     _bullets = new Bullet* [MAX_BULLETS];
     this->setxVelocity(0);
@@ -44,12 +44,13 @@ void Humanoid::update()
         
         if (bullet->getSprite().GetPosition().x <= 0 || bullet->getSprite().GetPosition().x >= 800 ||
             bullet->getSprite().GetPosition().y <= 0 || bullet->getSprite().GetPosition().y >= 600)
-        {
+        {               
             for (int j=i+1; j <= _lastUsedBulletIndex; j++)
             {
                 _bullets[j - 1] = _bullets[j];
             }
             
+            this->getGame()->removeEntity(bullet);
             _lastUsedBulletIndex--;
         }
     } 
@@ -66,7 +67,7 @@ void Humanoid::draw(RoboEngine* roboEngine) const
 
 void Humanoid::fire(float const rico)
 {
-    Bullet *bullet = new Bullet();
+    Bullet *bullet = new Bullet(this->getGame());
     bullet->setSprite(*RoboEngine::getSpriteByName("resources/bullet_red.png"));
     bullet->getSprite().SetCenter(bullet->getSprite().GetSize().x / 2, bullet->getSprite().GetSize().y / 2);
     bullet->getSprite().SetPosition(this->getSprite().GetPosition());
@@ -77,6 +78,8 @@ void Humanoid::fire(float const rico)
     if ((_lastUsedBulletIndex + 1) < MAX_BULLETS)
     {   
         _bullets[_lastUsedBulletIndex + 1] = bullet;    
+        this->getGame()->addEntity(bullet);
+        
         _lastUsedBulletIndex++;
     }
 }

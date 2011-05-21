@@ -10,7 +10,7 @@
 #include "Player.h"
 
 
-Player::Player()
+Player::Player(RoboGame *game) : Humanoid(game)
 {
     this->setxVelocity(0);
     this->setyVelocity(0);

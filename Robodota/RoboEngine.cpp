@@ -98,7 +98,6 @@ void RoboEngine::removeImageFromCache(std::string const &name)
 
 void RoboEngine::draw()
 {
-    
 }
 
 void RoboEngine::draw(RoboSprite const &sprite)

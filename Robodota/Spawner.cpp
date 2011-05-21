@@ -9,24 +9,23 @@
 #include <iostream.h>
 #include "RoboEngine.h"
 #include "RoboSprite.h"
+#include "RoboGame.h"
 #include "Enemy.h"
 #include "Spawner.h"
 
 
-Spawner::Spawner()
+Spawner::Spawner(RoboGame *game) : RoboEntity(game)
 {
     _elapsedTime = 0.0f;
     _enemies = new Humanoid* [MAX_ENEMIES_PER_SPAWNER];
     _lastUsedEnemyIndex = -1;
 }
 
-Spawner::Spawner(RoboSprite &sprite)// : RoboEntity(sprite)
+Spawner::Spawner(RoboGame *game, RoboSprite *sprite) : RoboEntity(game, sprite)
 {
     _elapsedTime = 0.0f;
     _enemies = new Humanoid* [MAX_ENEMIES_PER_SPAWNER];
     _lastUsedEnemyIndex = -1;
-    
-    this->setSprite(sprite);
 }
 
 Spawner::~Spawner()
@@ -44,7 +43,7 @@ void Spawner::update()
         
         cout << "Spawning zombot\n";
         
-        Enemy *enemy = new Enemy();
+        Enemy *enemy = new Enemy(this->getGame());
         enemy->setSprite(*RoboEngine::getSpriteByName("resources/block_yellow.png"));
         enemy->getSprite().SetCenter(enemy->getSprite().GetSize().x / 2, enemy->getSprite().GetSize().y / 2);
         enemy->getSprite().SetPosition(this->getSprite().GetPosition().x, this->getSprite().GetPosition().y);
@@ -52,9 +51,9 @@ void Spawner::update()
         if ((_lastUsedEnemyIndex + 1) < MAX_ENEMIES_PER_SPAWNER)
         {
             _enemies[_lastUsedEnemyIndex + 1] = enemy;
+            this->getGame()->addEntity(enemy);
             _lastUsedEnemyIndex++;
         }
-        _enemies[_lastUsedEnemyIndex + 1] = enemy;
         
         _elapsedTime = 0;
     }

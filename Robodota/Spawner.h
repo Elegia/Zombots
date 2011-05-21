@@ -19,8 +19,8 @@ class Spawner : public RoboEntity
     int _lastUsedEnemyIndex;
     
 public:
-    Spawner();
-    Spawner(RoboSprite &sprite);
+    Spawner(RoboGame *game);
+    Spawner(RoboGame *game, RoboSprite *sprite);
     ~Spawner();
     
     void update();

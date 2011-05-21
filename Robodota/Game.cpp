@@ -10,36 +10,31 @@
 #include "RoboSprite.h"
 #include "RoboUtil.h"
 #include "Player.h"
-#include "World.h"
 #include "Spawner.h"
 
 #include "Game.h"
 
 
-Game::Game(RoboEngine *engine)
+Game::Game(RoboEngine *engine) : RoboGame(engine)
 {
-    // Test sprites
-    _roboEngine = engine;
+    sf::Image *myImage = engine->getTextureByName("resources/minion_melee_red.png");
+    engine->addImageToCache("tower_blue", *myImage);
     
-    sf::Image *myImage = _roboEngine->getTextureByName("resources/minion_melee_red.png");
-    _roboEngine->addImageToCache("tower_blue", *myImage);
-    
-    RoboSprite *sprite = _roboEngine->getSpriteWithImage(*myImage);
+    RoboSprite *sprite = engine->getSpriteWithImage(*myImage);
     sprite->SetCenter(sprite->GetSize().x / 2, sprite->GetSize().y / 2);
     sprite->SetPosition(100, 100);
     
-    _player = new Player();
+    _player = new Player(this);
     _player->setSprite(*sprite);
     
-    
-    _world = new World();
+    this->addEntity(_player);
+
     
     // Create a spawner
-    
-    RoboSprite *spawnSprite = _roboEngine->getSpriteByName("resources/block_orange.png");
-    Spawner *spawner = new Spawner(*spawnSprite);
+    RoboSprite *spawnSprite = engine->getSpriteByName("resources/block_orange.png");
+    Spawner *spawner = new Spawner(this, spawnSprite);
     spawner->getSprite().SetPosition(300, 300);
-    _world->addEntity(spawner);
+    this->addEntity(spawner);
     
 }
 
@@ -99,7 +94,7 @@ void Game::handleInput(const sf::Input &input)
         ! input.IsKeyDown(sf::Key::A) && ! input.IsKeyDown(sf::Key::D))
     {
         _player->setxVelocity(0);
-        _player->setyVelocity(0); 
+        _player->setyVelocity(0);
     }
     
     // Mouse buttons
@@ -108,17 +103,14 @@ void Game::handleInput(const sf::Input &input)
     {
         _player->fire(rico);
     }
-
 }
 
 void Game::update()
 {
     _player->update();
-    _world->update();
 }
 
 void Game::draw()
 {
-    _player->draw(_roboEngine);
-    _world->draw(_roboEngine);
+    RoboGame::draw();
 }

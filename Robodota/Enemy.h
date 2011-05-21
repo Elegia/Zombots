@@ -12,6 +12,6 @@ class Enemy : public Humanoid
 {    
   
 public:
-    Enemy();
+    Enemy(RoboGame *game);
     ~Enemy();
 };

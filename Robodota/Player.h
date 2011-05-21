@@ -12,6 +12,6 @@ class Player : public Humanoid
 {
     
 public:
-    Player();
+    Player(RoboGame *game);
     ~Player();
 };

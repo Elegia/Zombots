@@ -6,23 +6,31 @@
 //  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
+#include "RoboGame.h"
 #include "RoboEngine.h"
 #include "RoboSprite.h"
 #include "RoboEntity.h"
 
-RoboEntity::RoboEntity()
+RoboEntity::RoboEntity(RoboGame *game)
 {
-    
+    _game = game;
 }
 
-RoboEntity::RoboEntity(RoboSprite &sprite)
+RoboEntity::RoboEntity(RoboGame *game, RoboSprite *sprite)
 {
-    _sprite = &sprite;
+    _game = game;
+    _sprite = sprite;
 }
+
 
 RoboEntity::~RoboEntity()
 {
     delete _sprite;
+}
+
+RoboGame* RoboEntity::getGame() const
+{
+    return _game;
 }
 
 void RoboEntity::update()

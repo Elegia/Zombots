@@ -13,9 +13,6 @@ class Bullet;
 
 #include "RoboEntity.h"
 
-//class RoboEngine;
-//class RoboSprite;
-
 
 class Humanoid : public RoboEntity
 {
@@ -25,7 +22,7 @@ class Humanoid : public RoboEntity
     int _lastUsedBulletIndex;
     
 public:
-    Humanoid();
+    Humanoid(RoboGame *game);
     ~Humanoid();
     
     void update();
