@@ -11,7 +11,6 @@
 		FE5F776C137FDD73003D6C9C /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE5F776A137FDD73003D6C9C /* Enemy.cpp */; };
 		FE5F776F137FDDE7003D6C9C /* Humanoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE5F776D137FDDE7003D6C9C /* Humanoid.cpp */; };
 		FE5F7774137FEE5F003D6C9C /* RoboEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE5F7772137FEE5E003D6C9C /* RoboEntity.cpp */; };
-		FE7971A1137F347C00C7C444 /* RoboGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE79719D137F347C00C7C444 /* RoboGame.cpp */; };
 		FE7971A2137F347C00C7C444 /* RoboSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE79719F137F347C00C7C444 /* RoboSprite.cpp */; };
 		FE7971A7137F348800C7C444 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A3137F348800C7C444 /* Bullet.cpp */; };
 		FE7971A8137F348800C7C444 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A5137F348800C7C444 /* Game.cpp */; };
@@ -73,8 +72,6 @@
 		FE5F776E137FDDE7003D6C9C /* Humanoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Humanoid.h; path = /Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Humanoid.h; sourceTree = "<absolute>"; };
 		FE5F7772137FEE5E003D6C9C /* RoboEntity.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboEntity.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboEntity.cpp; sourceTree = "<group>"; };
 		FE5F7773137FEE5F003D6C9C /* RoboEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboEntity.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboEntity.h; sourceTree = "<group>"; };
-		FE79719D137F347C00C7C444 /* RoboGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboGame.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboGame.cpp; sourceTree = "<group>"; };
-		FE79719E137F347C00C7C444 /* RoboGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboGame.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboGame.h; sourceTree = "<group>"; };
 		FE79719F137F347C00C7C444 /* RoboSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboSprite.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboSprite.cpp; sourceTree = "<group>"; };
 		FE7971A0137F347C00C7C444 /* RoboSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboSprite.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboSprite.h; sourceTree = "<group>"; };
 		FE7971A3137F348800C7C444 /* Bullet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Bullet.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Bullet.cpp; sourceTree = "<group>"; };
@@ -149,8 +146,6 @@
 			children = (
 				FEA35B991370894700D6F63B /* RoboEngine.cpp */,
 				FEA35B98137088F000D6F63B /* RoboEngine.h */,
-				FE79719D137F347C00C7C444 /* RoboGame.cpp */,
-				FE79719E137F347C00C7C444 /* RoboGame.h */,
 				FE79719F137F347C00C7C444 /* RoboSprite.cpp */,
 				FE7971A0137F347C00C7C444 /* RoboSprite.h */,
 				FE5F7772137FEE5E003D6C9C /* RoboEntity.cpp */,
@@ -284,7 +279,6 @@
 			files = (
 				FEA35B811370829200D6F63B /* main.cpp in Sources */,
 				FEA35B9A1370894700D6F63B /* RoboEngine.cpp in Sources */,
-				FE7971A1137F347C00C7C444 /* RoboGame.cpp in Sources */,
 				FE7971A2137F347C00C7C444 /* RoboSprite.cpp in Sources */,
 				FE7971A7137F348800C7C444 /* Bullet.cpp in Sources */,
 				FE7971A8137F348800C7C444 /* Game.cpp in Sources */,
