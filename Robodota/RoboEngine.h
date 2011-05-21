@@ -14,7 +14,7 @@
 #include <iostream.h>
 #include "Configuration.h"
 
-class RoboGame;
+class RoboScene;
 class RoboSprite;
 class RoboUtil;
 
@@ -22,7 +22,7 @@ class RoboEngine {
     
     sf::RenderWindow *_renderWindow;
     
-    RoboGame *_roboGame;
+    RoboScene *_RoboScene;
     
     std::map<std::string, sf::Image> *_imageCache;
     
@@ -32,7 +32,7 @@ class RoboEngine {
 public:
     RoboEngine();
     
-    int init(int screenWidth, int screenHeight, int bpp, RoboGame *roboGame);
+    int init(int screenWidth, int screenHeight, int bpp, RoboScene *RoboScene);
     
     static sf::Image* getTextureByName(std::string const &name);
     static RoboSprite* getSpriteWithImage(const sf::Image &image);

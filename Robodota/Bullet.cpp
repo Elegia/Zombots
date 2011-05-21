@@ -9,7 +9,7 @@
 #include "Bullet.h"
 #include "RoboSprite.h"
 
-Bullet::Bullet(RoboGame *game) : RoboEntity(game)
+Bullet::Bullet(RoboScene *game) : RoboEntity(game)
 {
     this->setSpeed(10.0f);
 }

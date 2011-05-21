@@ -1,5 +1,5 @@
 //
-//  RoboGame.cpp
+//  RoboScene.cpp
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 07/05/11.
@@ -8,9 +8,9 @@
 
 #include "RoboEngine.h"
 #include "RoboEntity.h"
-#include "RoboGame.h"
+#include "RoboScene.h"
 
-RoboGame::RoboGame(RoboEngine* engine)
+RoboScene::RoboScene(RoboEngine* engine)
 {
     _roboEngine = engine;
     
@@ -18,22 +18,22 @@ RoboGame::RoboGame(RoboEngine* engine)
     _lastUsedEntityIndex = -1;
 }
 
-RoboGame::~RoboGame()
+RoboScene::~RoboScene()
 {
     delete _entities;
 }
 
-void RoboGame::handleInput(const sf::Input &input)
+void RoboScene::handleInput(const sf::Input &input)
 {
     
 }
 
-void RoboGame::update()
+void RoboScene::update()
 {
     
 }
 
-void RoboGame::draw()
+void RoboScene::draw()
 {
     for (int i = 0; i <= _lastUsedEntityIndex; i++)
     {
@@ -41,12 +41,12 @@ void RoboGame::draw()
     }
 }
 
-RoboEngine* RoboGame::getEngine()
+RoboEngine* RoboScene::getEngine()
 {
     return _roboEngine;
 }
 
-void RoboGame::addEntity(RoboEntity* const entity)
+void RoboScene::addEntity(RoboEntity* const entity)
 {
     if ((_lastUsedEntityIndex + 1) < 2048)
     {
@@ -55,7 +55,7 @@ void RoboGame::addEntity(RoboEntity* const entity)
     }
 }
 
-void RoboGame::removeEntity(RoboEntity* const entity)
+void RoboScene::removeEntity(RoboEntity* const entity)
 {
     for (int i = 0; i <= _lastUsedEntityIndex; i++)
     {

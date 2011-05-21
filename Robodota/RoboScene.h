@@ -1,5 +1,5 @@
 //
-//  RoboGame.h
+//  RoboScene.h
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 07/05/11.
@@ -11,7 +11,7 @@
 class RoboEngine;
 class RoboEntity;
 
-class RoboGame {
+class RoboScene {
 
     RoboEngine *_roboEngine;
     
@@ -19,8 +19,8 @@ class RoboGame {
     int _lastUsedEntityIndex;
     
 public:
-    RoboGame(RoboEngine* engine);
-    ~RoboGame();
+    RoboScene(RoboEngine* engine);
+    ~RoboScene();
     
     virtual void handleInput(const sf::Input &input);
     virtual void update();

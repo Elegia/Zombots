@@ -10,11 +10,11 @@
 #include "Bullet.h"
 #include "RoboEngine.h"
 #include "RoboSprite.h"
-#include "RoboGame.h"
+#include "RoboScene.h"
 #include "Humanoid.h"
 
 
-Humanoid::Humanoid(RoboGame *game) : RoboEntity(game)
+Humanoid::Humanoid(RoboScene *game) : RoboEntity(game)
 {
     _bullets = new Bullet* [MAX_BULLETS];
     this->setxVelocity(0);

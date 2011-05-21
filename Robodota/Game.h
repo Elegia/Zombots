@@ -10,13 +10,13 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-#include "RoboGame.h"
+#include "RoboScene.h"
 
 class RoboEngine;
 class RoboSprite;
 class Player;
 
-class Game : public RoboGame {
+class Game : public RoboScene {
     
     Player *_player;
     

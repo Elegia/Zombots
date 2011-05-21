@@ -12,13 +12,13 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
-class RoboGame;
+class RoboScene;
 class RoboSprite;
 class RoboEngine;
 
 class RoboEntity
 {
-    RoboGame *_game;
+    RoboScene *_game;
     RoboSprite *_sprite;
     
     float _xVelocity;
@@ -26,11 +26,11 @@ class RoboEntity
     float _speed;
     
 public:
-    RoboEntity(RoboGame *game);
-    RoboEntity(RoboGame *game, RoboSprite *sprite);
+    RoboEntity(RoboScene *game);
+    RoboEntity(RoboScene *game, RoboSprite *sprite);
     ~RoboEntity();
     
-    RoboGame* getGame() const;
+    RoboScene* getGame() const;
     
     virtual void update();
     void draw(RoboEngine *engine) const;

@@ -10,7 +10,7 @@
 #include "Enemy.h"
 
 
-Enemy::Enemy(RoboGame *game) : Humanoid(game)
+Enemy::Enemy(RoboScene *game) : Humanoid(game)
 {
     
 }

@@ -9,19 +9,19 @@
 #include <iostream.h>
 #include "RoboEngine.h"
 #include "RoboSprite.h"
-#include "RoboGame.h"
+#include "RoboScene.h"
 #include "Enemy.h"
 #include "Spawner.h"
 
 
-Spawner::Spawner(RoboGame *game) : RoboEntity(game)
+Spawner::Spawner(RoboScene *game) : RoboEntity(game)
 {
     _elapsedTime = 0.0f;
     _enemies = new Humanoid* [MAX_ENEMIES_PER_SPAWNER];
     _lastUsedEnemyIndex = -1;
 }
 
-Spawner::Spawner(RoboGame *game, RoboSprite *sprite) : RoboEntity(game, sprite)
+Spawner::Spawner(RoboScene *game, RoboSprite *sprite) : RoboEntity(game, sprite)
 {
     _elapsedTime = 0.0f;
     _enemies = new Humanoid* [MAX_ENEMIES_PER_SPAWNER];

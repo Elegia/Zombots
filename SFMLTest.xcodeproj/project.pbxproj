@@ -34,6 +34,7 @@
 		FEA35B811370829200D6F63B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B801370829200D6F63B /* main.cpp */; };
 		FEA35B87137082B900D6F63B /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B86137082B900D6F63B /* SFML.framework */; };
 		FEA35B9A1370894700D6F63B /* RoboEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B991370894700D6F63B /* RoboEngine.cpp */; };
+		FEC6C94F138848B00074BF9E /* RoboScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C94D138848B00074BF9E /* RoboScene.cpp */; };
 		FEE982EF1387DB45000E4765 /* block_orange.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE5F7764137FDD47003D6C9C /* block_orange.png */; };
 		FEE982F01387DB45000E4765 /* block_yellow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE5F7765137FDD47003D6C9C /* block_yellow.png */; };
 /* End PBXBuildFile section */
@@ -103,6 +104,8 @@
 		FEA35B971370872000D6F63B /* tower_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tower_red.png; path = Resources/tower_red.png; sourceTree = "<group>"; };
 		FEA35B98137088F000D6F63B /* RoboEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboEngine.h; sourceTree = "<group>"; };
 		FEA35B991370894700D6F63B /* RoboEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoboEngine.cpp; sourceTree = "<group>"; };
+		FEC6C94D138848B00074BF9E /* RoboScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboScene.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboScene.cpp; sourceTree = "<group>"; };
+		FEC6C94E138848B00074BF9E /* RoboScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboScene.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboScene.h; sourceTree = "<group>"; };
 		FEE982F21387F408000E4765 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Configuration.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Configuration.h; sourceTree = "<group>"; };
 		FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,6 +147,8 @@
 		FE4BE5DB1375C48B00C857E6 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				FEC6C94D138848B00074BF9E /* RoboScene.cpp */,
+				FEC6C94E138848B00074BF9E /* RoboScene.h */,
 				FEA35B991370894700D6F63B /* RoboEngine.cpp */,
 				FEA35B98137088F000D6F63B /* RoboEngine.h */,
 				FE79719F137F347C00C7C444 /* RoboSprite.cpp */,
@@ -288,6 +293,7 @@
 				FE5F776C137FDD73003D6C9C /* Enemy.cpp in Sources */,
 				FE5F776F137FDDE7003D6C9C /* Humanoid.cpp in Sources */,
 				FE5F7774137FEE5F003D6C9C /* RoboEntity.cpp in Sources */,
+				FEC6C94F138848B00074BF9E /* RoboScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

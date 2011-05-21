@@ -8,7 +8,7 @@
 
 #include <iostream.h>
 #include "RoboEngine.h"
-#include "RoboGame.h"
+#include "RoboScene.h"
 #include "RoboSprite.h"
 #include "RoboUtil.h"
 
@@ -17,7 +17,7 @@ RoboEngine::RoboEngine()
     _imageCache = new std::map<std::string, sf::Image>();
 }
 
-int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboGame *roboGame)
+int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboScene *RoboScene)
 {
     _renderWindow = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight, bpp), "Zombots from Outer Space", sf::Style::Resize | sf::Style::Close, sf::WindowSettings(32, 8, 0));
     
@@ -46,13 +46,13 @@ int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboGame *roboG
         
         const sf::Input& input = _renderWindow->GetInput();
         
-        roboGame->handleInput(input);
+        RoboScene->handleInput(input);
         
-        roboGame->update();
+        RoboScene->update();
         
         _renderWindow->Clear(sf::Color::White);
         
-        roboGame->draw();
+        RoboScene->draw();
         
         _renderWindow->Display();
     }

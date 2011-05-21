@@ -15,7 +15,7 @@
 #include "Game.h"
 
 
-Game::Game(RoboEngine *engine) : RoboGame(engine)
+Game::Game(RoboEngine *engine) : RoboScene(engine)
 {
     sf::Image *myImage = engine->getTextureByName("resources/minion_melee_red.png");
     engine->addImageToCache("tower_blue", *myImage);
@@ -112,5 +112,5 @@ void Game::update()
 
 void Game::draw()
 {
-    RoboGame::draw();
+    RoboScene::draw();
 }

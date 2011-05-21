@@ -22,7 +22,7 @@ class Humanoid : public RoboEntity
     int _lastUsedBulletIndex;
     
 public:
-    Humanoid(RoboGame *game);
+    Humanoid(RoboScene *game);
     ~Humanoid();
     
     void update();
