@@ -3,7 +3,7 @@
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 07/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
 #include "RoboEngine.h"
@@ -13,7 +13,7 @@
 
 World::World()
 {
-    _entities = new RoboEntity* [2048];
+    _entities = new RoboEntity* [MAX_WORLD_OBJECTS];
     _lastUsedEntityIndex = -1;
 }
 
@@ -40,7 +40,7 @@ void World::draw(RoboEngine *roboEngine) const
 
 void World::addEntity(RoboEntity *entity)
 {
-    if ((_lastUsedEntityIndex + 1) < 2048)
+    if ((_lastUsedEntityIndex + 1) < MAX_WORLD_OBJECTS)
     {
         _entities[_lastUsedEntityIndex + 1] = entity;
         _lastUsedEntityIndex++;

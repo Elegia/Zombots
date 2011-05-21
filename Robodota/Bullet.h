@@ -3,17 +3,16 @@
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 14/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
-class RoboSprite;
+#ifndef BULLET
+#define BULLET
 
-class Bullet
+#include "RoboEntity.h"
+
+class Bullet : public RoboEntity
 {
-    RoboSprite *_sprite;
-    float _xVelocity;
-    float _yVelocity;
-    float _speed;
     
 public:
     
@@ -21,17 +20,6 @@ public:
     ~Bullet();
     
     void update();
-    
-    RoboSprite& getSprite() const;
-    void setSprite(RoboSprite &sprite);
-    
-    const float getxVelocity() const;
-    void setxVelocity(float xVelocity);
-    
-    const float getyVelocity() const;
-    void setyVelocity(float yVelocity);
-    
-    const float getSpeed() const;
-    
-    
 };
+
+#endif

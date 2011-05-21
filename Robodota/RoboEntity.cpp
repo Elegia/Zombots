@@ -3,7 +3,7 @@
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 15/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
 #include "RoboEngine.h"
@@ -52,4 +52,34 @@ RoboSprite& RoboEntity::getSprite() const
 void RoboEntity::setSprite(RoboSprite &sprite)
 {
     _sprite = &sprite;
+}
+
+const float RoboEntity::getxVelocity() const
+{
+    return _xVelocity;
+}
+
+void RoboEntity::setxVelocity(float xVelocity)
+{
+    _xVelocity = xVelocity;
+}
+
+const float RoboEntity::getyVelocity() const
+{
+    return _yVelocity;
+}
+
+void RoboEntity::setyVelocity(float yVelocity)
+{
+    _yVelocity = yVelocity;
+}
+
+const float RoboEntity::getSpeed() const
+{
+    return _speed;
+}
+
+void RoboEntity::setSpeed(float speed)
+{
+    _speed = speed;
 }

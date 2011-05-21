@@ -3,12 +3,13 @@
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 13/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
 #include "Humanoid.h"
 
-class Player : public Humanoid {
+class Player : public Humanoid 
+{
     
 public:
     Player();

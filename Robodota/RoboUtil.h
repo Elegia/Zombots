@@ -3,7 +3,7 @@
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 14/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
 #include <SFML/Graphics.hpp>

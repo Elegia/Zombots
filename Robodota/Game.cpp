@@ -3,7 +3,7 @@
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 07/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
 #include "RoboEngine.h"
@@ -39,7 +39,6 @@ Game::Game(RoboEngine *engine)
     RoboSprite *spawnSprite = _roboEngine->getSpriteByName("resources/block_orange.png");
     Spawner *spawner = new Spawner(*spawnSprite);
     spawner->getSprite().SetPosition(300, 300);
-
     _world->addEntity(spawner);
     
 }

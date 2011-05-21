@@ -3,7 +3,7 @@
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 03/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
 #include <iostream.h>
@@ -94,6 +94,11 @@ void RoboEngine::addImageToCache(std::string const &name, sf::Image const &image
 void RoboEngine::removeImageFromCache(std::string const &name)
 {
     _imageCache->erase(name);
+}
+
+void RoboEngine::draw()
+{
+    
 }
 
 void RoboEngine::draw(RoboSprite const &sprite)

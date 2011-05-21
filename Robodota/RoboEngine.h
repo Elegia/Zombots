@@ -3,7 +3,7 @@
 //  SFMLTest
 //
 //  Created by Maarten Lauwers on 03/05/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Maarten Lauwers. All rights reserved.
 //
 
 
@@ -12,6 +12,7 @@
 #include <SFML/Graphics.hpp>
 
 #include <iostream.h>
+#include "Configuration.h"
 
 class RoboGame;
 class RoboSprite;
@@ -40,6 +41,7 @@ public:
     void addImageToCache(std::string const &name, sf::Image const &image);
     void removeImageFromCache(std::string const &name);
     
+    void draw();
     void draw(RoboSprite const &sprite);
     
     sf::Vector2f getScreenSize() const;

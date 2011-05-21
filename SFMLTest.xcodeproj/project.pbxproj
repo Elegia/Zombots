@@ -106,6 +106,7 @@
 		FEA35B971370872000D6F63B /* tower_red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tower_red.png; path = Resources/tower_red.png; sourceTree = "<group>"; };
 		FEA35B98137088F000D6F63B /* RoboEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboEngine.h; sourceTree = "<group>"; };
 		FEA35B991370894700D6F63B /* RoboEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoboEngine.cpp; sourceTree = "<group>"; };
+		FEE982F21387F408000E4765 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Configuration.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Configuration.h; sourceTree = "<group>"; };
 		FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				FEA35B801370829200D6F63B /* main.cpp */,
+				FEE982F21387F408000E4765 /* Configuration.h */,
 				FE5F7771137FE160003D6C9C /* World */,
 				FE5F7770137FE0FC003D6C9C /* Humanoids */,
 				FE7971A3137F348800C7C444 /* Bullet.cpp */,
