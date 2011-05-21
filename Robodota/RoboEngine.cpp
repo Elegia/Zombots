@@ -7,50 +7,53 @@
 //
 
 #include "RoboEngine.h"
+#include "RoboGame.h"
+#include "RoboSprite.h"
+#include "RoboUtil.h"
 
 RoboEngine::RoboEngine()
 {
-    
+    _imageCache = new std::map<std::string, sf::Image>();
 }
 
 int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboGame *roboGame)
 {
-    renderWindow = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight, bpp), "Zombots from Outer Space", sf::Style::Resize | sf::Style::Close, sf::WindowSettings(32, 8, 0));
+    _renderWindow = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight, bpp), "Zombots from Outer Space", sf::Style::Resize | sf::Style::Close, sf::WindowSettings(32, 8, 0));
     
     _screenWidth = screenWidth;
     _screenHeight = screenHeight;
     
-    renderWindow->UseVerticalSync(true);
-    renderWindow->SetFramerateLimit(60);
+    _renderWindow->UseVerticalSync(true);
+    _renderWindow->SetFramerateLimit(60);
     
     // Start the main loop
-    while (renderWindow->IsOpened())
+    while (_renderWindow->IsOpened())
     {
         
         sf::Event event;
-        while (renderWindow->GetEvent(event))
+        while (_renderWindow->GetEvent(event))
         {
             if (event.Type == sf::Event::Closed)
             {
-                renderWindow->Close();
+                _renderWindow->Close();
             }                
             else if (event.Type == sf::Event::KeyPressed && event.Key.Code == sf::Key::Escape)
             {
-                renderWindow->Close();
+                _renderWindow->Close();
             }
         }
         
-        const sf::Input& input = renderWindow->GetInput();
+        const sf::Input& input = _renderWindow->GetInput();
         
         roboGame->handleInput(input);
         
         roboGame->update();
         
-        renderWindow->Clear(sf::Color::White);
+        _renderWindow->Clear(sf::Color::White);
         
         roboGame->draw();
         
-        renderWindow->Display();
+        _renderWindow->Display();
     }
     
     return EXIT_SUCCESS;
@@ -84,17 +87,17 @@ RoboSprite* RoboEngine::getSpriteByName(std::string const &name)
 
 void RoboEngine::addImageToCache(std::string const &name, sf::Image const &image)
 {
-    imageCache.insert(std::pair<std::string, sf::Image>(name, image));
+    _imageCache->insert(std::pair<std::string, sf::Image>(name, image));
 }
 
 void RoboEngine::removeImageFromCache(std::string const &name)
 {
-    imageCache.erase(name);
+    _imageCache->erase(name);
 }
 
 void RoboEngine::draw(RoboSprite const &sprite)
 {
-    renderWindow->Draw(sprite);
+    _renderWindow->Draw(sprite);
 }
 
 sf::Vector2f RoboEngine::getScreenSize() const

@@ -6,6 +6,8 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#include "RoboEngine.h"
+#include "RoboSprite.h"
 #include "RoboEntity.h"
 
 RoboEntity::RoboEntity()

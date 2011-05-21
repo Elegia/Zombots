@@ -6,14 +6,24 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "RoboEngine.h"
-#import "RoboSprite.h"
-#import "Player.h"
+
+//#include "Spawner.h"
+//#include "World.h"
+
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+
+#include "RoboGame.h"
+
+class RoboEngine;
+class RoboSprite;
+class Player;
 
 class Game : public RoboGame {
   
     RoboEngine *_roboEngine;
     
+    //World *_world;
     Player *_player;
     
 public:

@@ -7,6 +7,7 @@
 //
 
 #include "Bullet.h"
+#include "RoboSprite.h"
 
 Bullet::Bullet()
 {

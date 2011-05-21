@@ -6,21 +6,24 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+
+
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 
 #include <iostream.h>
-#include "RoboGame.h"
-#include "RoboSprite.h"
-#include "RoboUtil.h"
+
+class RoboGame;
+class RoboSprite;
+class RoboUtil;
 
 class RoboEngine {
     
-    sf::RenderWindow *renderWindow;
+    sf::RenderWindow *_renderWindow;
     
-    RoboGame *roboGame;
+    RoboGame *_roboGame;
     
-    std::map<std::string, sf::Image> imageCache;
+    std::map<std::string, sf::Image> *_imageCache;
     
     int _screenWidth;
     int _screenHeight;

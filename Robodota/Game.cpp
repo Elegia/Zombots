@@ -7,6 +7,10 @@
 //
 
 #include "Game.h"
+#include "RoboEngine.h"
+#include "RoboSprite.h"
+#include "RoboUtil.h"
+#include "Player.h"
 
 Game::Game(RoboEngine *engine)
 {
@@ -22,7 +26,17 @@ Game::Game(RoboEngine *engine)
     
     _player = new Player();
     _player->setSprite(*sprite);
+    
+    /*
+    _world = new World();
+    
+    // Create a spawner
+    
+    RoboSprite *spawnSprite = _roboEngine->getSpriteByName("resources/block_orange.png");
+    Spawner *spawner = new Spawner(*spawnSprite);
 
+    _world->addEntity(*spawner);
+    */
 }
 
 void Game::handleInput(const sf::Input &input)

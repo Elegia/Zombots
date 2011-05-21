@@ -6,7 +6,8 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#include "RoboEntity.h"
+class RoboEngine;
+class RoboEntity;
 
 class World {
     

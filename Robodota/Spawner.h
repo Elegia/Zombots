@@ -6,9 +6,9 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#include "RoboEntity.h"
+class RoboEntity;
 
-class Spawner : RoboEntity
+class Spawner : public RoboEntity
 {
   
 public:

@@ -6,8 +6,11 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#include "RoboEngine.h"
-#include "Bullet.h"
+
+
+class RoboEngine;
+class RoboSprite;
+class Bullet;
 
 class Humanoid
 {
@@ -17,7 +20,7 @@ class Humanoid
     float _speed;
     int _health;
     
-    Bullet _bullets[512];
+    Bullet *_bullets;
     int _lastUsedBulletIndex;
     
 public:

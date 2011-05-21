@@ -6,7 +6,10 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+#include "RoboEngine.h"
+#include "RoboEntity.h"
 #include "World.h"
+
 
 World::World()
 {

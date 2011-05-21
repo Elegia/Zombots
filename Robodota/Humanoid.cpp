@@ -6,10 +6,17 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
+
+#include "Bullet.h"
+#include "RoboEngine.h"
+#include "RoboSprite.h"
+
 #include "Humanoid.h"
+
 
 Humanoid::Humanoid()
 {
+    _bullets = new Bullet[512];
     _xVelocity = 0;
     _yVelocity = 0;
     _lastUsedBulletIndex = -1;
@@ -17,7 +24,9 @@ Humanoid::Humanoid()
 
 Humanoid::~Humanoid()
 {
-    delete _sprite;
+    delete _bullets;
+    #warning where does sprite come from?
+    delete _sprite; 
 }
 
 void Humanoid::update()
@@ -67,8 +76,8 @@ void Humanoid::fire(float const rico)
     bullet.setxVelocity(cosf(rico) * bullet.getSpeed());
     bullet.setyVelocity(sinf(rico) * bullet.getSpeed());
     
-    if ((_lastUsedBulletIndex + 1) < sizeof(_bullets)/sizeof(Bullet))
-    {
+    if ((_lastUsedBulletIndex + 1) < 512)
+    {   
         _bullets[_lastUsedBulletIndex + 1] = bullet;    
         _lastUsedBulletIndex++;
     }
