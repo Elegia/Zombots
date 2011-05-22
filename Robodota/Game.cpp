@@ -18,7 +18,7 @@
 Game::Game(RoboEngine *engine) : RoboScene(engine)
 {
     sf::Image *myImage = engine->getTextureByName("resources/minion_melee_red.png");
-    engine->addImageToCache("tower_blue", *myImage);
+    engine->addImageToCache("tower_blue", myImage);
     
     RoboSprite *sprite = engine->getSpriteWithImage(*myImage);
     sprite->SetCenter(sprite->GetSize().x / 2, sprite->GetSize().y / 2);

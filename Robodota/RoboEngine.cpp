@@ -12,10 +12,27 @@
 #include "RoboSprite.h"
 #include "RoboUtil.h"
 
+RoboEngine* RoboEngine::_instance = NULL;
+
 RoboEngine::RoboEngine()
 {
-    _imageCache = new std::map<std::string, sf::Image>();
+    _imageCache = new std::map<std::string, sf::Image*>();
 }
+
+RoboEngine::~RoboEngine()
+{
+    delete _instance;
+}
+
+RoboEngine* RoboEngine::Instance()
+{
+    if(_instance == NULL)
+    {
+        _instance = new RoboEngine();
+    }
+    return _instance;
+}
+
 
 int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboScene *RoboScene)
 {
@@ -62,12 +79,31 @@ int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboScene *Robo
 
 sf::Image* RoboEngine::getTextureByName(std::string const &name)
 {
-    sf::Image *image = new sf::Image();
-    if (! image->LoadFromFile(name))
+    RoboEngine *engine = RoboEngine::Instance();
+    
+    std::map<std::string, sf::Image*>::iterator imageCacheIterator = engine->getImageCache()->find(name);
+    
+    if (imageCacheIterator != engine->getImageCache()->end())
     {
-        cout << "Could not load image " << name << " in getTextureByName.\n";
+        // Use the image from the cache
+        
+        return engine->getImageFromCache(name);
     }
-    return image;
+    else
+    {
+        // Load the image and add it to the cache
+        
+        sf::Image *image = new sf::Image();
+        if (! image->LoadFromFile(name))
+        {
+            cout << "Could not load image " << name << " in getTextureByName.\n";
+        }
+        else
+        {
+            engine->addImageToCache(name, image);
+        }
+        return image;
+    }
 }
 
 RoboSprite* RoboEngine::getSpriteWithImage(const sf::Image &image)
@@ -86,9 +122,25 @@ RoboSprite* RoboEngine::getSpriteByName(std::string const &name)
     return getSpriteWithImage( *getTextureByName(name) );
 }
 
-void RoboEngine::addImageToCache(std::string const &name, sf::Image const &image)
+std::map<std::string, sf::Image*>* RoboEngine::getImageCache() const
 {
-    _imageCache->insert(std::pair<std::string, sf::Image>(name, image));
+    return _imageCache;
+}
+
+void RoboEngine::addImageToCache(std::string const &name, sf::Image* const image)
+{
+    _imageCache->insert(std::pair<std::string, sf::Image*>(name, image));
+}
+
+sf::Image* RoboEngine::getImageFromCache(std::string const &name)
+{
+    std::map<std::string, sf::Image*>::iterator imageCacheIterator = _imageCache->find(name);
+    
+    if (imageCacheIterator != _imageCache->end())
+    {
+        return imageCacheIterator->second;
+    }
+    return NULL;
 }
 
 void RoboEngine::removeImageFromCache(std::string const &name)

@@ -20,17 +20,24 @@ class RoboUtil;
 
 class RoboEngine {
     
+    static RoboEngine* _instance;
+    
     sf::RenderWindow *_renderWindow;
     
     RoboScene *_RoboScene;
     
-    std::map<std::string, sf::Image> *_imageCache;
+    std::map<std::string, sf::Image*> *_imageCache;
     
     int _screenWidth;
     int _screenHeight;
     
-public:
+protected:
     RoboEngine();
+    
+public:
+    ~RoboEngine();
+    
+    static RoboEngine* Instance();
     
     int init(int screenWidth, int screenHeight, int bpp, RoboScene *RoboScene);
     
@@ -38,7 +45,9 @@ public:
     static RoboSprite* getSpriteWithImage(const sf::Image &image);
     static RoboSprite* getSpriteByName(std::string const &name);
     
-    void addImageToCache(std::string const &name, sf::Image const &image);
+    std::map<std::string, sf::Image*>* getImageCache() const; 
+    void addImageToCache(std::string const &name, sf::Image* const image);
+    sf::Image* getImageFromCache(std::string const &name);
     void removeImageFromCache(std::string const &name);
     
     void draw();

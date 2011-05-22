@@ -13,10 +13,10 @@
 int main (int argc, const char * argv[])
 {
 
-    RoboEngine engine = RoboEngine();
-    Game *game = new Game(&engine);
+    RoboEngine *engine = RoboEngine::Instance();
+    Game *game = new Game(engine);
     
-    engine.init(800, 600, 32, game);
+    engine->init(800, 600, 32, game);
     
     delete(game);
     

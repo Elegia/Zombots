@@ -49,7 +49,6 @@ RoboEngine* RoboScene::getEngine()
 
 void RoboScene::addEntity(RoboEntity* const entity)
 {
-    
     if ((_lastUsedEntityIndex + 1) < 2048)
     {
         _entities[_lastUsedEntityIndex + 1] = entity;
