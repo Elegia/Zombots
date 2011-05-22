@@ -13,11 +13,6 @@
 
 class RoboSprite : public sf::Sprite {
     
-    int _layer;
-    
 public:
     RoboSprite();
-    
-    void setLayer(int const layer);
-    int getLayer() const;
 };

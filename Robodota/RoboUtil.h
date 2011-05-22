@@ -7,6 +7,7 @@
 //
 
 #include <SFML/Graphics.hpp>
+#include "RoboEntity.h"
 
 class RoboUtil
 {
@@ -45,5 +46,20 @@ public:
         }
         
         return resultDegrees;
+    }
+    
+    static void sortEntities(RoboEntity** entities, int length) {
+        
+        int i, j;
+        RoboEntity *tmp;
+        for (i = 1; i < length; i++) {
+            j = i;
+            while (j > 0 && entities[j - 1]->getLayer() > entities[j]->getLayer()) {
+                tmp = entities[j];
+                entities[j] = entities[j - 1];
+                entities[j - 1] = tmp;
+                j--;
+            }
+        }
     }
 };

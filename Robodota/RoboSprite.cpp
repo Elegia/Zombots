@@ -10,15 +10,5 @@
 
 RoboSprite::RoboSprite()
 {
-    _layer = 0;
 }
 
-void RoboSprite::setLayer(int const layer)
-{
-    _layer = layer;
-}
-
-int RoboSprite::getLayer() const 
-{
-    return _layer;
-}

@@ -25,6 +25,8 @@ class RoboEntity
     float _yVelocity;
     float _speed;
     
+    int _layer;
+    
 public:
     RoboEntity(RoboScene *game);
     RoboEntity(RoboScene *game, RoboSprite *sprite);
@@ -34,6 +36,9 @@ public:
     
     virtual void update();
     void draw(RoboEngine *engine) const;
+
+    const int getLayer() const;
+    void setLayer(int const layer);
     
     const float getxVelocity() const;
     void setxVelocity(float xVelocity);

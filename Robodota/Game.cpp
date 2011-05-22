@@ -26,7 +26,7 @@ Game::Game(RoboEngine *engine) : RoboScene(engine)
     
     _player = new Player(this);
     _player->setSprite(*sprite);
-    
+    _player->setLayer(999);
     this->addEntity(_player);
 
     

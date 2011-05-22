@@ -9,6 +9,7 @@
 #include "RoboEngine.h"
 #include "RoboEntity.h"
 #include "RoboScene.h"
+#include "RoboUtil.h"
 
 RoboScene::RoboScene(RoboEngine* engine)
 {
@@ -48,11 +49,15 @@ RoboEngine* RoboScene::getEngine()
 
 void RoboScene::addEntity(RoboEntity* const entity)
 {
+    
     if ((_lastUsedEntityIndex + 1) < 2048)
     {
         _entities[_lastUsedEntityIndex + 1] = entity;
         _lastUsedEntityIndex++;
     }
+    
+    // Sort the list by layer
+    RoboUtil::sortEntities(_entities, _lastUsedEntityIndex + 1);
 }
 
 void RoboScene::removeEntity(RoboEntity* const entity)

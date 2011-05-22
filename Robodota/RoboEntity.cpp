@@ -14,6 +14,7 @@
 RoboEntity::RoboEntity(RoboScene *game)
 {
     _game = game;
+    _layer = 0;
 }
 
 RoboEntity::RoboEntity(RoboScene *game, RoboSprite *sprite)
@@ -50,6 +51,16 @@ void RoboEntity::draw(RoboEngine *engine) const
     {
         engine->draw(*_sprite);
     }
+}
+
+const int RoboEntity::getLayer() const 
+{
+    return _layer;
+}
+
+void RoboEntity::setLayer(int const layer)
+{
+    _layer = layer;
 }
 
 RoboSprite& RoboEntity::getSprite() const

@@ -75,6 +75,8 @@ void Humanoid::fire(float const rico)
     bullet->setxVelocity(cosf(rico) * bullet->getSpeed());
     bullet->setyVelocity(sinf(rico) * bullet->getSpeed());
     
+    bullet->setLayer(999);
+    
     if ((_lastUsedBulletIndex + 1) < MAX_BULLETS)
     {   
         _bullets[_lastUsedBulletIndex + 1] = bullet;    

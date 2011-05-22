@@ -35,6 +35,28 @@
 		FEA35B87137082B900D6F63B /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B86137082B900D6F63B /* SFML.framework */; };
 		FEA35B9A1370894700D6F63B /* RoboEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B991370894700D6F63B /* RoboEngine.cpp */; };
 		FEC6C94F138848B00074BF9E /* RoboScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C94D138848B00074BF9E /* RoboScene.cpp */; };
+		FEC6C95B138869B20074BF9E /* RoboEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC6C95A138869B20074BF9E /* RoboEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEC6C95E138869B20074BF9E /* RoboEngine.cp in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C95D138869B20074BF9E /* RoboEngine.cp */; };
+		FEC6C962138869C30074BF9E /* RoboScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C94D138848B00074BF9E /* RoboScene.cpp */; };
+		FEC6C963138869C30074BF9E /* RoboScene.h in Sources */ = {isa = PBXBuildFile; fileRef = FEC6C94E138848B00074BF9E /* RoboScene.h */; };
+		FEC6C964138869C30074BF9E /* RoboEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B991370894700D6F63B /* RoboEngine.cpp */; };
+		FEC6C965138869C30074BF9E /* RoboEngine.h in Sources */ = {isa = PBXBuildFile; fileRef = FEA35B98137088F000D6F63B /* RoboEngine.h */; };
+		FEC6C966138869C30074BF9E /* RoboSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE79719F137F347C00C7C444 /* RoboSprite.cpp */; };
+		FEC6C967138869C30074BF9E /* RoboSprite.h in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A0137F347C00C7C444 /* RoboSprite.h */; };
+		FEC6C968138869C30074BF9E /* RoboEntity.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE5F7772137FEE5E003D6C9C /* RoboEntity.cpp */; };
+		FEC6C969138869C30074BF9E /* RoboEntity.h in Sources */ = {isa = PBXBuildFile; fileRef = FE5F7773137FEE5F003D6C9C /* RoboEntity.h */; };
+		FEC6C96A138869C30074BF9E /* RoboUtil.h in Sources */ = {isa = PBXBuildFile; fileRef = FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */; };
+		FEC6C96D138869F20074BF9E /* sfml-audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971AF137F359600C7C444 /* sfml-audio.framework */; };
+		FEC6C96E138869F20074BF9E /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B0137F359600C7C444 /* sfml-graphics.framework */; };
+		FEC6C96F138869F20074BF9E /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B1137F359600C7C444 /* sfml-network.framework */; };
+		FEC6C970138869F20074BF9E /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B2137F359600C7C444 /* sfml-system.framework */; };
+		FEC6C971138869F20074BF9E /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B3137F359600C7C444 /* sfml-window.framework */; };
+		FEC6C972138869F20074BF9E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE985EBB1375724A00BD2A34 /* CoreFoundation.framework */; };
+		FEC6C973138869F20074BF9E /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA35B86137082B900D6F63B /* SFML.framework */; };
+		FEC6C97413886A060074BF9E /* RoboScene.h in Headers */ = {isa = PBXBuildFile; fileRef = FEC6C94E138848B00074BF9E /* RoboScene.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEC6C97513886A060074BF9E /* RoboSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7971A0137F347C00C7C444 /* RoboSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEC6C97613886A060074BF9E /* RoboEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = FE5F7773137FEE5F003D6C9C /* RoboEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEC6C97713886A060074BF9E /* RoboUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEE982EF1387DB45000E4765 /* block_orange.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE5F7764137FDD47003D6C9C /* block_orange.png */; };
 		FEE982F01387DB45000E4765 /* block_yellow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE5F7765137FDD47003D6C9C /* block_yellow.png */; };
 /* End PBXBuildFile section */
@@ -106,6 +128,13 @@
 		FEA35B991370894700D6F63B /* RoboEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RoboEngine.cpp; sourceTree = "<group>"; };
 		FEC6C94D138848B00074BF9E /* RoboScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboScene.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboScene.cpp; sourceTree = "<group>"; };
 		FEC6C94E138848B00074BF9E /* RoboScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboScene.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboScene.h; sourceTree = "<group>"; };
+		FEC6C954138869B20074BF9E /* RoboEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = RoboEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEC6C957138869B20074BF9E /* RoboEngine-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RoboEngine-Prefix.pch"; sourceTree = "<group>"; };
+		FEC6C958138869B20074BF9E /* RoboEngineProj.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RoboEngineProj.xcconfig; sourceTree = "<group>"; };
+		FEC6C959138869B20074BF9E /* RoboEngineTarget.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RoboEngineTarget.xcconfig; sourceTree = "<group>"; };
+		FEC6C95A138869B20074BF9E /* RoboEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoboEngine.h; sourceTree = "<group>"; };
+		FEC6C95C138869B20074BF9E /* RoboEnginePriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoboEnginePriv.h; sourceTree = "<group>"; };
+		FEC6C95D138869B20074BF9E /* RoboEngine.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RoboEngine.cp; sourceTree = "<group>"; };
 		FEE982F21387F408000E4765 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Configuration.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Configuration.h; sourceTree = "<group>"; };
 		FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -122,6 +151,20 @@
 				FE7971B8137F359600C7C444 /* sfml-window.framework in Frameworks */,
 				FE985EBC1375724A00BD2A34 /* CoreFoundation.framework in Frameworks */,
 				FEA35B87137082B900D6F63B /* SFML.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEC6C951138869B20074BF9E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC6C96D138869F20074BF9E /* sfml-audio.framework in Frameworks */,
+				FEC6C96E138869F20074BF9E /* sfml-graphics.framework in Frameworks */,
+				FEC6C96F138869F20074BF9E /* sfml-network.framework in Frameworks */,
+				FEC6C970138869F20074BF9E /* sfml-system.framework in Frameworks */,
+				FEC6C971138869F20074BF9E /* sfml-window.framework in Frameworks */,
+				FEC6C972138869F20074BF9E /* CoreFoundation.framework in Frameworks */,
+				FEC6C973138869F20074BF9E /* SFML.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,10 +190,10 @@
 		FE4BE5DB1375C48B00C857E6 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				FEC6C94D138848B00074BF9E /* RoboScene.cpp */,
-				FEC6C94E138848B00074BF9E /* RoboScene.h */,
 				FEA35B991370894700D6F63B /* RoboEngine.cpp */,
 				FEA35B98137088F000D6F63B /* RoboEngine.h */,
+				FEC6C94D138848B00074BF9E /* RoboScene.cpp */,
+				FEC6C94E138848B00074BF9E /* RoboScene.h */,
 				FE79719F137F347C00C7C444 /* RoboSprite.cpp */,
 				FE7971A0137F347C00C7C444 /* RoboSprite.h */,
 				FE5F7772137FEE5E003D6C9C /* RoboEntity.cpp */,
@@ -195,6 +238,7 @@
 				FE985EBB1375724A00BD2A34 /* CoreFoundation.framework */,
 				FEA35B86137082B900D6F63B /* SFML.framework */,
 				FEA35B7F1370829200D6F63B /* Robodota */,
+				FEC6C955138869B20074BF9E /* RoboEngine */,
 				FEA35B7D1370829200D6F63B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -203,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				FEA35B7C1370829200D6F63B /* Robodota */,
+				FEC6C954138869B20074BF9E /* RoboEngine.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,7 +280,43 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		FEC6C955138869B20074BF9E /* RoboEngine */ = {
+			isa = PBXGroup;
+			children = (
+				FEC6C958138869B20074BF9E /* RoboEngineProj.xcconfig */,
+				FEC6C959138869B20074BF9E /* RoboEngineTarget.xcconfig */,
+				FEC6C95A138869B20074BF9E /* RoboEngine.h */,
+				FEC6C95C138869B20074BF9E /* RoboEnginePriv.h */,
+				FEC6C95D138869B20074BF9E /* RoboEngine.cp */,
+				FEC6C956138869B20074BF9E /* Supporting Files */,
+			);
+			path = RoboEngine;
+			sourceTree = "<group>";
+		};
+		FEC6C956138869B20074BF9E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FEC6C957138869B20074BF9E /* RoboEngine-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		FEC6C952138869B20074BF9E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC6C97413886A060074BF9E /* RoboScene.h in Headers */,
+				FEC6C97513886A060074BF9E /* RoboSprite.h in Headers */,
+				FEC6C97613886A060074BF9E /* RoboEntity.h in Headers */,
+				FEC6C97713886A060074BF9E /* RoboUtil.h in Headers */,
+				FEC6C95B138869B20074BF9E /* RoboEngine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		FEA35B7B1370829200D6F63B /* Robodota */ = {
@@ -255,6 +336,23 @@
 			productReference = FEA35B7C1370829200D6F63B /* Robodota */;
 			productType = "com.apple.product-type.tool";
 		};
+		FEC6C953138869B20074BF9E /* RoboEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FEC6C95F138869B20074BF9E /* Build configuration list for PBXNativeTarget "RoboEngine" */;
+			buildPhases = (
+				FEC6C950138869B20074BF9E /* Sources */,
+				FEC6C951138869B20074BF9E /* Frameworks */,
+				FEC6C952138869B20074BF9E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RoboEngine;
+			productName = RoboEngine;
+			productReference = FEC6C954138869B20074BF9E /* RoboEngine.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -273,6 +371,7 @@
 			projectRoot = "";
 			targets = (
 				FEA35B7B1370829200D6F63B /* Robodota */,
+				FEC6C953138869B20074BF9E /* RoboEngine */,
 			);
 		};
 /* End PBXProject section */
@@ -294,6 +393,23 @@
 				FE5F776F137FDDE7003D6C9C /* Humanoid.cpp in Sources */,
 				FE5F7774137FEE5F003D6C9C /* RoboEntity.cpp in Sources */,
 				FEC6C94F138848B00074BF9E /* RoboScene.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FEC6C950138869B20074BF9E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEC6C962138869C30074BF9E /* RoboScene.cpp in Sources */,
+				FEC6C963138869C30074BF9E /* RoboScene.h in Sources */,
+				FEC6C964138869C30074BF9E /* RoboEngine.cpp in Sources */,
+				FEC6C965138869C30074BF9E /* RoboEngine.h in Sources */,
+				FEC6C966138869C30074BF9E /* RoboSprite.cpp in Sources */,
+				FEC6C967138869C30074BF9E /* RoboSprite.h in Sources */,
+				FEC6C968138869C30074BF9E /* RoboEntity.cpp in Sources */,
+				FEC6C969138869C30074BF9E /* RoboEntity.h in Sources */,
+				FEC6C96A138869C30074BF9E /* RoboUtil.h in Sources */,
+				FEC6C95E138869B20074BF9E /* RoboEngine.cp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +471,48 @@
 			};
 			name = Release;
 		};
+		FEC6C960138869B20074BF9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FEC6C961138869B20074BF9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -372,6 +530,15 @@
 			buildConfigurations = (
 				FEA35B841370829200D6F63B /* Debug */,
 				FEA35B851370829200D6F63B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FEC6C95F138869B20074BF9E /* Build configuration list for PBXNativeTarget "RoboEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FEC6C960138869B20074BF9E /* Debug */,
+				FEC6C961138869B20074BF9E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
