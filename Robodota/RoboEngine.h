@@ -18,13 +18,14 @@ class RoboScene;
 class RoboSprite;
 class RoboUtil;
 
+// Singleton
 class RoboEngine {
     
     static RoboEngine* _instance;
     
     sf::RenderWindow *_renderWindow;
     
-    RoboScene *_RoboScene;
+    RoboScene *_roboScene;
     
     std::map<std::string, sf::Image*> *_imageCache;
     
@@ -39,20 +40,26 @@ public:
     
     static RoboEngine* Instance();
     
-    int init(int screenWidth, int screenHeight, int bpp, RoboScene *RoboScene);
+    int init(int screenWidth, int screenHeight, int bpp, RoboScene *roboScene);
     
+    void replaceScene(RoboScene* roboScene);
+    
+    // Texture and sprite loading and creation
     static sf::Image* getTextureByName(std::string const &name);
     static RoboSprite* getSpriteWithImage(const sf::Image &image);
     static RoboSprite* getSpriteByName(std::string const &name);
     
+    // Image caching
     std::map<std::string, sf::Image*>* getImageCache() const; 
     void addImageToCache(std::string const &name, sf::Image* const image);
     sf::Image* getImageFromCache(std::string const &name);
     void removeImageFromCache(std::string const &name);
     
+    // Drawing
     void draw();
-    void draw(RoboSprite const &sprite);
+    void draw(RoboSprite const *sprite);
     
+    // Utility
     sf::Vector2f getScreenSize() const;
     
 };

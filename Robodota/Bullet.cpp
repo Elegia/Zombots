@@ -21,8 +21,8 @@ Bullet::~Bullet()
 
 void Bullet::update()
 {
-    sf::Vector2f position = this->getSprite().GetPosition();
+    sf::Vector2f position = this->getSprite()->GetPosition();
     position.x += this->getxVelocity();
     position.y += this->getyVelocity();
-    this->getSprite().SetPosition(position.x, position.y);
+    this->getSprite()->SetPosition(position.x, position.y);
 }

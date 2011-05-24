@@ -8,6 +8,7 @@
 
 #include "RoboEngine.h"
 #include "RoboSprite.h"
+#include "RoboAnimation.h"
 #include "RoboUtil.h"
 #include "Player.h"
 #include "Spawner.h"
@@ -25,7 +26,7 @@ Game::Game(RoboEngine *engine) : RoboScene(engine)
     sprite->SetPosition(100, 100);
     
     _player = new Player(this);
-    _player->setSprite(*sprite);
+    _player->setSprite(sprite);
     _player->setLayer(999);
     this->addEntity(_player);
 
@@ -33,8 +34,25 @@ Game::Game(RoboEngine *engine) : RoboScene(engine)
     // Create a spawner
     RoboSprite *spawnSprite = engine->getSpriteByName("resources/block_orange.png");
     Spawner *spawner = new Spawner(this, spawnSprite);
-    spawner->getSprite().SetPosition(300, 300);
+    spawner->getSprite()->SetPosition(300, 300);
     this->addEntity(spawner);
+    
+    // Test animation
+    
+    RoboAnimation *animation = new RoboAnimation(this);
+    
+    animation->addFrame(engine->getSpriteByName("resources/frame1.png"));
+    animation->addFrame(engine->getSpriteByName("resources/frame2.png"));
+    animation->addFrame(engine->getSpriteByName("resources/frame3.png"));
+    animation->addFrame(engine->getSpriteByName("resources/frame4.png"));
+    animation->addFrame(engine->getSpriteByName("resources/frame5.png"));
+    
+    animation->setPosition(450, 300);
+    
+    animation->setFramerate(15);
+    animation->play();
+    
+    this->addEntity(animation);
     
 }
 
@@ -46,9 +64,9 @@ void Game::handleInput(const sf::Input &input)
     mousePoint.y = input.GetMouseY();
     
     // Rotate the player to face our mouse cursor
-    sf::Vector2f playerPoint = _player->getSprite().GetPosition();
+    sf::Vector2f playerPoint = _player->getSprite()->GetPosition();
     float angle = RoboUtil::getAngle(playerPoint, mousePoint);
-    _player->getSprite().SetRotation(-angle);
+    _player->getSprite()->SetRotation(-angle);
     
     // Calculate the direction vector
     float rico = atan2(mousePoint.y - playerPoint.y, mousePoint.x - playerPoint.x);
@@ -75,7 +93,7 @@ void Game::handleInput(const sf::Input &input)
         float cos = cosf(RoboUtil::toRadians(5));
         float sin = sinf(RoboUtil::toRadians(5));
         
-        _player->getSprite().SetPosition( (mousePoint.x + deltaX * cos - deltaY * sin), 
+        _player->getSprite()->SetPosition( (mousePoint.x + deltaX * cos - deltaY * sin), 
                                          (mousePoint.y + deltaY * cos + deltaX * sin));
     }
     
@@ -86,7 +104,7 @@ void Game::handleInput(const sf::Input &input)
         float cos = cosf(RoboUtil::toRadians(-5));
         float sin = sinf(RoboUtil::toRadians(-5));
         
-        _player->getSprite().SetPosition( (mousePoint.x + deltaX * cos - deltaY * sin), 
+        _player->getSprite()->SetPosition( (mousePoint.x + deltaX * cos - deltaY * sin), 
                                          (mousePoint.y + deltaY * cos + deltaX * sin));
     }
     
@@ -107,6 +125,8 @@ void Game::handleInput(const sf::Input &input)
 
 void Game::update()
 {
+    RoboScene::update();
+    
     _player->update();
 }
 

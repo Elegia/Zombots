@@ -30,10 +30,10 @@ Humanoid::~Humanoid()
 void Humanoid::update()
 {
     // Update humanoid position
-    sf::Vector2f position = this->getSprite().GetPosition();
+    sf::Vector2f position = this->getSprite()->GetPosition();
     position.x += this->getxVelocity();
     position.y += this->getyVelocity();
-    this->getSprite().SetPosition(position.x, position.y);
+    this->getSprite()->SetPosition(position.x, position.y);
     
     // Update bullet positions
     for (int i=_lastUsedBulletIndex; i>=0; i--)
@@ -42,12 +42,12 @@ void Humanoid::update()
         
         bullet->update();
         
-        if (bullet->getSprite().GetPosition().x <= 0 || bullet->getSprite().GetPosition().x >= 800 ||
-            bullet->getSprite().GetPosition().y <= 0 || bullet->getSprite().GetPosition().y >= 600)
+        if (bullet->getSprite()->GetPosition().x <= 0 || bullet->getSprite()->GetPosition().x >= 800 ||
+            bullet->getSprite()->GetPosition().y <= 0 || bullet->getSprite()->GetPosition().y >= 600)
         {               
-            for (int j=i+1; j <= _lastUsedBulletIndex; j++)
+            for (int j=i; j < _lastUsedBulletIndex; j++)
             {
-                _bullets[j - 1] = _bullets[j];
+                _bullets[j] = _bullets[j + 1];
             }
             
             this->getGame()->removeEntity(bullet);
@@ -58,19 +58,21 @@ void Humanoid::update()
 
 void Humanoid::draw(RoboEngine* roboEngine) const
 {
+    /*
     roboEngine->draw(this->getSprite());
     for (int i=_lastUsedBulletIndex; i>=0; i--)
     {
         roboEngine->draw(_bullets[i]->getSprite());
     }
+    */
 }
 
 void Humanoid::fire(float const rico)
 {
     Bullet *bullet = new Bullet(this->getGame());
-    bullet->setSprite(*RoboEngine::getSpriteByName("resources/bullet_red.png"));
-    bullet->getSprite().SetCenter(bullet->getSprite().GetSize().x / 2, bullet->getSprite().GetSize().y / 2);
-    bullet->getSprite().SetPosition(this->getSprite().GetPosition());
+    bullet->setSprite(RoboEngine::getSpriteByName("resources/bullet_red.png"));
+    bullet->getSprite()->SetCenter(bullet->getSprite()->GetSize().x / 2, bullet->getSprite()->GetSize().y / 2);
+    bullet->getSprite()->SetPosition(this->getSprite()->GetPosition());
     
     bullet->setxVelocity(cosf(rico) * bullet->getSpeed());
     bullet->setyVelocity(sinf(rico) * bullet->getSpeed());

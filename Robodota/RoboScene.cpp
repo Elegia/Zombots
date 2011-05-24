@@ -31,7 +31,10 @@ void RoboScene::handleInput(const sf::Input &input)
 
 void RoboScene::update()
 {
-    
+    for (int i = 0; i <= _lastUsedEntityIndex; i++)
+    {
+        _entities[i]->update();
+    }
 }
 
 void RoboScene::draw()
@@ -67,12 +70,13 @@ void RoboScene::removeEntity(RoboEntity* const entity)
         {
             delete entity;
             
-            for (int j=i+1; j <= _lastUsedEntityIndex; j++)
+            for (int j=i; j < _lastUsedEntityIndex; j++)
             {
-                _entities[j - 1] = _entities[j];
+                _entities[j] = _entities[j + 1];
             }
             
             _lastUsedEntityIndex--;            
+            break;
         }
     }
 }

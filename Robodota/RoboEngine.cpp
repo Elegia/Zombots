@@ -22,6 +22,7 @@ RoboEngine::RoboEngine()
 RoboEngine::~RoboEngine()
 {
     delete _instance;
+    delete _roboScene;
 }
 
 RoboEngine* RoboEngine::Instance()
@@ -34,7 +35,7 @@ RoboEngine* RoboEngine::Instance()
 }
 
 
-int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboScene *RoboScene)
+int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboScene *roboScene)
 {
     _renderWindow = new sf::RenderWindow(sf::VideoMode(screenWidth, screenHeight, bpp), "Zombots from Outer Space", sf::Style::Resize | sf::Style::Close, sf::WindowSettings(32, 8, 0));
     
@@ -44,9 +45,14 @@ int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboScene *Robo
     _renderWindow->UseVerticalSync(true);
     _renderWindow->SetFramerateLimit(60);
     
+    _roboScene = roboScene;
+    
     // Start the main loop
     while (_renderWindow->IsOpened())
     {
+        
+        float Framerate = 1.f / _renderWindow->GetFrameTime();    
+        cout << "Framerate: " << Framerate << "\n";
         
         sf::Event event;
         while (_renderWindow->GetEvent(event))
@@ -63,18 +69,25 @@ int RoboEngine::init(int screenWidth, int screenHeight, int bpp, RoboScene *Robo
         
         const sf::Input& input = _renderWindow->GetInput();
         
-        RoboScene->handleInput(input);
+        _roboScene->handleInput(input);
         
-        RoboScene->update();
+        _roboScene->update();
         
         _renderWindow->Clear(sf::Color::White);
         
-        RoboScene->draw();
+        _roboScene->draw();
         
         _renderWindow->Display();
     }
     
     return EXIT_SUCCESS;
+}
+
+void RoboEngine::replaceScene(RoboScene* roboScene)
+{
+    delete _roboScene;
+    
+    _roboScene = roboScene;
 }
 
 sf::Image* RoboEngine::getTextureByName(std::string const &name)
@@ -152,9 +165,16 @@ void RoboEngine::draw()
 {
 }
 
-void RoboEngine::draw(RoboSprite const &sprite)
+void RoboEngine::draw(RoboSprite const *sprite)
 {
-    _renderWindow->Draw(sprite);
+    // Draw only if the sprite is visible on the screen
+    sf::Vector2f screenSize = this->getScreenSize();
+    
+    if (sprite->GetPosition().x >= 0 && sprite->GetPosition().x <= screenSize.x &&
+        sprite->GetPosition().y >= 0 && sprite->GetPosition().y <= screenSize.y)
+    {
+        _renderWindow->Draw(*sprite);
+    }
 }
 
 sf::Vector2f RoboEngine::getScreenSize() const

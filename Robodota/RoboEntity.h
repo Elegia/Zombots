@@ -49,8 +49,8 @@ public:
     const float getSpeed() const;
     void setSpeed(float speed);
     
-    RoboSprite& getSprite() const;
-    void setSprite(RoboSprite &sprite);
+    RoboSprite* getSprite() const;
+    void setSprite(RoboSprite *sprite);
 };
 
 #endif

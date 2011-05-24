@@ -35,6 +35,7 @@ Spawner::~Spawner()
 
 void Spawner::update()
 {
+    
     _elapsedTime += _clock.GetElapsedTime();
     
     if (_elapsedTime > 2.0)
@@ -44,9 +45,9 @@ void Spawner::update()
         cout << "Spawning zombot\n";
         
         Enemy *enemy = new Enemy(this->getGame());
-        enemy->setSprite(*RoboEngine::getSpriteByName("resources/block_yellow.png"));
-        enemy->getSprite().SetCenter(enemy->getSprite().GetSize().x / 2, enemy->getSprite().GetSize().y / 2);
-        enemy->getSprite().SetPosition(this->getSprite().GetPosition().x, this->getSprite().GetPosition().y);
+        enemy->setSprite(RoboEngine::getSpriteByName("resources/block_yellow.png"));
+        enemy->getSprite()->SetCenter(enemy->getSprite()->GetSize().x / 2, enemy->getSprite()->GetSize().y / 2);
+        enemy->getSprite()->SetPosition(this->getSprite()->GetPosition().x, this->getSprite()->GetPosition().y);
         
         if ((_lastUsedEnemyIndex + 1) < MAX_ENEMIES_PER_SPAWNER)
         {
@@ -59,4 +60,5 @@ void Spawner::update()
     }
     
     _clock.Reset();
+    
 }

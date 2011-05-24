@@ -49,7 +49,7 @@ void RoboEntity::draw(RoboEngine *engine) const
     if (_sprite->GetPosition().x >= 0 && _sprite->GetPosition().x <= screenSize.x &&
         _sprite->GetPosition().y >= 0 && _sprite->GetPosition().y <= screenSize.y)
     {
-        engine->draw(*_sprite);
+        engine->draw(_sprite);
     }
 }
 
@@ -63,14 +63,14 @@ void RoboEntity::setLayer(int const layer)
     _layer = layer;
 }
 
-RoboSprite& RoboEntity::getSprite() const
+RoboSprite* RoboEntity::getSprite() const
 {
-    return *_sprite;
+    return _sprite;
 }
 
-void RoboEntity::setSprite(RoboSprite &sprite)
+void RoboEntity::setSprite(RoboSprite *sprite)
 {
-    _sprite = &sprite;
+    _sprite = sprite;
 }
 
 const float RoboEntity::getxVelocity() const

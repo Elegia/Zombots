@@ -57,6 +57,12 @@
 		FEC6C97513886A060074BF9E /* RoboSprite.h in Headers */ = {isa = PBXBuildFile; fileRef = FE7971A0137F347C00C7C444 /* RoboSprite.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEC6C97613886A060074BF9E /* RoboEntity.h in Headers */ = {isa = PBXBuildFile; fileRef = FE5F7773137FEE5F003D6C9C /* RoboEntity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FEC6C97713886A060074BF9E /* RoboUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FED1041A138C2D020001FDD7 /* RoboAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FED10418138C2D020001FDD7 /* RoboAnimation.cpp */; };
+		FED10422138C39300001FDD7 /* frame1.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FED1041D138C390E0001FDD7 /* frame1.png */; };
+		FED10423138C39300001FDD7 /* frame2.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FED1041E138C390E0001FDD7 /* frame2.png */; };
+		FED10424138C39300001FDD7 /* frame3.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FED1041F138C390E0001FDD7 /* frame3.png */; };
+		FED10425138C39300001FDD7 /* frame4.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FED10420138C390E0001FDD7 /* frame4.png */; };
+		FED10426138C39300001FDD7 /* frame5.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FED10421138C390E0001FDD7 /* frame5.png */; };
 		FEE982EF1387DB45000E4765 /* block_orange.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE5F7764137FDD47003D6C9C /* block_orange.png */; };
 		FEE982F01387DB45000E4765 /* block_yellow.png in CopyFiles */ = {isa = PBXBuildFile; fileRef = FE5F7765137FDD47003D6C9C /* block_yellow.png */; };
 /* End PBXBuildFile section */
@@ -68,6 +74,11 @@
 			dstPath = resources;
 			dstSubfolderSpec = 16;
 			files = (
+				FED10422138C39300001FDD7 /* frame1.png in CopyFiles */,
+				FED10423138C39300001FDD7 /* frame2.png in CopyFiles */,
+				FED10424138C39300001FDD7 /* frame3.png in CopyFiles */,
+				FED10425138C39300001FDD7 /* frame4.png in CopyFiles */,
+				FED10426138C39300001FDD7 /* frame5.png in CopyFiles */,
 				FEE982EF1387DB45000E4765 /* block_orange.png in CopyFiles */,
 				FEE982F01387DB45000E4765 /* block_yellow.png in CopyFiles */,
 				FE985EBE1375738100BD2A34 /* bullet_blue.png in CopyFiles */,
@@ -135,6 +146,13 @@
 		FEC6C95A138869B20074BF9E /* RoboEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoboEngine.h; sourceTree = "<group>"; };
 		FEC6C95C138869B20074BF9E /* RoboEnginePriv.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoboEnginePriv.h; sourceTree = "<group>"; };
 		FEC6C95D138869B20074BF9E /* RoboEngine.cp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RoboEngine.cp; sourceTree = "<group>"; };
+		FED10418138C2D020001FDD7 /* RoboAnimation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RoboAnimation.cpp; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboAnimation.cpp; sourceTree = "<group>"; };
+		FED10419138C2D020001FDD7 /* RoboAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoboAnimation.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/RoboAnimation.h; sourceTree = "<group>"; };
+		FED1041D138C390E0001FDD7 /* frame1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame1.png; sourceTree = "<group>"; };
+		FED1041E138C390E0001FDD7 /* frame2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame2.png; sourceTree = "<group>"; };
+		FED1041F138C390E0001FDD7 /* frame3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame3.png; sourceTree = "<group>"; };
+		FED10420138C390E0001FDD7 /* frame4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame4.png; sourceTree = "<group>"; };
+		FED10421138C390E0001FDD7 /* frame5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame5.png; sourceTree = "<group>"; };
 		FEE982F21387F408000E4765 /* Configuration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Configuration.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Configuration.h; sourceTree = "<group>"; };
 		FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoboUtil.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -198,6 +216,8 @@
 				FE7971A0137F347C00C7C444 /* RoboSprite.h */,
 				FE5F7772137FEE5E003D6C9C /* RoboEntity.cpp */,
 				FE5F7773137FEE5F003D6C9C /* RoboEntity.h */,
+				FED10418138C2D020001FDD7 /* RoboAnimation.cpp */,
+				FED10419138C2D020001FDD7 /* RoboAnimation.h */,
 				FEEEB8DF137E7B2F00CC1485 /* RoboUtil.h */,
 			);
 			name = Engine;
@@ -265,6 +285,7 @@
 		FEA35B8E137086C400D6F63B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				FED1041C138C390E0001FDD7 /* Minotaur */,
 				FE5F7764137FDD47003D6C9C /* block_orange.png */,
 				FE5F7765137FDD47003D6C9C /* block_yellow.png */,
 				FEA35B8F1370872000D6F63B /* bullet_blue.png */,
@@ -299,6 +320,19 @@
 				FEC6C957138869B20074BF9E /* RoboEngine-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FED1041C138C390E0001FDD7 /* Minotaur */ = {
+			isa = PBXGroup;
+			children = (
+				FED1041D138C390E0001FDD7 /* frame1.png */,
+				FED1041E138C390E0001FDD7 /* frame2.png */,
+				FED1041F138C390E0001FDD7 /* frame3.png */,
+				FED10420138C390E0001FDD7 /* frame4.png */,
+				FED10421138C390E0001FDD7 /* frame5.png */,
+			);
+			name = Minotaur;
+			path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Resources/Minotaur;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +427,7 @@
 				FE5F776F137FDDE7003D6C9C /* Humanoid.cpp in Sources */,
 				FE5F7774137FEE5F003D6C9C /* RoboEntity.cpp in Sources */,
 				FEC6C94F138848B00074BF9E /* RoboScene.cpp in Sources */,
+				FED1041A138C2D020001FDD7 /* RoboAnimation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
