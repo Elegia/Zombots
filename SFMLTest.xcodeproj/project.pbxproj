@@ -15,7 +15,6 @@
 		FE7971A7137F348800C7C444 /* Bullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A3137F348800C7C444 /* Bullet.cpp */; };
 		FE7971A8137F348800C7C444 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A5137F348800C7C444 /* Game.cpp */; };
 		FE7971AD137F349200C7C444 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971A9137F349200C7C444 /* Player.cpp */; };
-		FE7971AE137F349200C7C444 /* World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7971AB137F349200C7C444 /* World.cpp */; };
 		FE7971B4137F359600C7C444 /* sfml-audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971AF137F359600C7C444 /* sfml-audio.framework */; };
 		FE7971B5137F359600C7C444 /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B0137F359600C7C444 /* sfml-graphics.framework */; };
 		FE7971B6137F359600C7C444 /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7971B1137F359600C7C444 /* sfml-network.framework */; };
@@ -114,8 +113,6 @@
 		FE7971A6137F348800C7C444 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Game.h; path = ../../../../../../../../Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Game.h; sourceTree = "<group>"; };
 		FE7971A9137F349200C7C444 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Player.cpp; path = /Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Player.cpp; sourceTree = "<absolute>"; };
 		FE7971AA137F349200C7C444 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Player.h; path = /Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/Player.h; sourceTree = "<absolute>"; };
-		FE7971AB137F349200C7C444 /* World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = World.cpp; path = /Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/World.cpp; sourceTree = "<absolute>"; };
-		FE7971AC137F349200C7C444 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = /Users/maarten/Pandora/pandora/trunk/Zombots/trunk/Robodota/World.h; sourceTree = "<absolute>"; };
 		FE7971AF137F359600C7C444 /* sfml-audio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-audio.framework"; path = "../../../../../../../Library/Frameworks/sfml-audio.framework"; sourceTree = "<group>"; };
 		FE7971B0137F359600C7C444 /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../../../../Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
 		FE7971B1137F359600C7C444 /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "../../../../../../../Library/Frameworks/sfml-network.framework"; sourceTree = "<group>"; };
@@ -239,8 +236,6 @@
 		FE5F7771137FE160003D6C9C /* World */ = {
 			isa = PBXGroup;
 			children = (
-				FE7971AB137F349200C7C444 /* World.cpp */,
-				FE7971AC137F349200C7C444 /* World.h */,
 				FE5F7767137FDD5E003D6C9C /* Spawner.cpp */,
 				FE5F7768137FDD5E003D6C9C /* Spawner.h */,
 			);
@@ -421,7 +416,6 @@
 				FE7971A7137F348800C7C444 /* Bullet.cpp in Sources */,
 				FE7971A8137F348800C7C444 /* Game.cpp in Sources */,
 				FE7971AD137F349200C7C444 /* Player.cpp in Sources */,
-				FE7971AE137F349200C7C444 /* World.cpp in Sources */,
 				FE5F7769137FDD5E003D6C9C /* Spawner.cpp in Sources */,
 				FE5F776C137FDD73003D6C9C /* Enemy.cpp in Sources */,
 				FE5F776F137FDDE7003D6C9C /* Humanoid.cpp in Sources */,

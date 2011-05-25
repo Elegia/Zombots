@@ -12,7 +12,7 @@
 
 RoboAnimation::RoboAnimation(RoboScene *game) : RoboEntity(game)
 {
-    _frames = new RoboSprite*[512];
+    _frames = new RoboSprite*[MAX_ANIMATION_FRAMES];
     _lastUsedFrameIndex = -1;
     
     _elapsedTime = 0.0f;
@@ -88,7 +88,7 @@ int RoboAnimation::getFramerate() const
 
 void RoboAnimation::addFrame(RoboSprite* const frame)
 {
-    if ((_lastUsedFrameIndex + 1) < 512)
+    if ((_lastUsedFrameIndex + 1) < MAX_ANIMATION_FRAMES)
     {
         _frames[_lastUsedFrameIndex + 1] = frame;
         _lastUsedFrameIndex++;

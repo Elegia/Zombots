@@ -49,7 +49,7 @@ Game::Game(RoboEngine *engine) : RoboScene(engine)
     
     animation->setPosition(450, 300);
     
-    animation->setFramerate(15);
+    animation->setFramerate(10);
     animation->play();
     
     this->addEntity(animation);
