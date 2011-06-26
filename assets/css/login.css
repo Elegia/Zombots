@@ -1,0 +1,23 @@
+.login_form {
+	position: relative;
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+
+.login_field {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+
+.login_field_title {
+	float: left;
+	width: 100px;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+
+.login_field_input {
+	float: left;
+}

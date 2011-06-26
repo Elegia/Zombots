@@ -19,5 +19,21 @@ CREATE TABLE user
 	join_date DATE not null
 );
 
+CREATE TABLE inventory
+(
+	inventory_id int unsigned not null auto_increment primary key,
+	user_id int unsigned unique not null foreign key,
+	turret int unsigned not null
+);
+
+CREATE TABLE battle
+(
+	battle_id int unsigned not null auto_increment primary key,
+	user_id int unsigned unique not null foreign key,
+	player_damage int unsigned not null,
+	zombie_damage int unsigned not null,
+	won boolean not null
+);
+
 # Add sample users
 INSERT INTO user VALUES(0, 'testuser','testuser','test@gmail.com', CURRENT_DATE());

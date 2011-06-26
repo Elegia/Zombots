@@ -42,9 +42,11 @@ class Login extends CI_Controller {
 			}
 			
 			
-			if ($this->User_model->validateUser($username, $password)) {
+			$user = $this->User_model->validateUser($username, $password);
+			if ($user != null) {
 			
-				$this->load->view('game');
+				$this->session->set_userdata('user', $user);
+				redirect('/game');
 				
 			} else {
 			
