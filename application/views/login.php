@@ -30,7 +30,7 @@
 
 	<?php $old_username = set_value('username'); ?>
 	
-	<?php echo form_open('login/login'); ?>
+	<?php echo form_open('login/loginUser'); ?>
 	
 	<div id="login_field_username" class="login_field">
 		
