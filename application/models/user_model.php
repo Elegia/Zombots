@@ -7,6 +7,7 @@ class User_model extends CI_Model {
 	var $password = '';
 	var $email = '';
 	var $join_date = '';
+	var $gold = '';
 	
 	function __construct() {
 	
@@ -26,6 +27,7 @@ class User_model extends CI_Model {
 				'username' => $row->username,
 				'email' => $row->email,
 				'join_date' => $row->join_date
+				'gold' => $row->gold
 			);
 		
 			return $user;
@@ -36,9 +38,6 @@ class User_model extends CI_Model {
 		}
 	}
 	
-	function getUserName($user_id) {
-		
-	}
 }
 
 ?>

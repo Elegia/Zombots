@@ -2,31 +2,33 @@
 
 <div id="header" class="header">
 	<p>
-	Welcome back, <?php echo $user['username'] ?>.
+	The Survivor's Do It Yourself
 	</p>
-	
 	<p>
-	Shop till ya drop.
+	Open 24/24
 	</p>
 </div>
 
 <!-- Shop form -->
 
+<?php foreach($items as $item) { ?>
+
 <div id="shop_form" class="shop_form">
 
-	<?php echo form_open('game/buy'); ?>
+	<?php echo form_open('shop/buy'); ?>
 	
 	<div id="shop_field_turret" class="shop_field">
 	
 		<div id="shop_field_turret_name" class="shop_field_title">
-			Turret (Basic)
+			<?php echo $item->item_name; ?></br>
+			Price: $<?php echo $item->item_price; ?>
 		</div>
 		
 		<div id="shop_field_turret_input" class="shop_field_input">
 			<?php
 				$data = array(
-			          'name'        => 'username',
-			          'id'          => 'username',
+			          'name'        => $item->item_name,
+			          'id'          => $item->item_name,
 			          'value'       => '',
 			          'maxlength'   => '100',
 			          'class'		=> 'login_field_input',
@@ -50,6 +52,8 @@
 	
 	<?php echo form_close(); ?>
 </div>
+
+<?php } ?>
 
 </body>
 </html>

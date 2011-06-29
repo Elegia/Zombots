@@ -1,8 +1,8 @@
 <?php
 
-class Game extends CI_Controller {
+class Shop extends CI_Controller {
 
-	function Game() {
+	function Shop() {
 	
 		parent::__construct();
 		
@@ -12,21 +12,21 @@ class Game extends CI_Controller {
 	}
 	
 	function index() {
+
+		$this->load->model('Item_model');
+
 		
 		$data = array(
-			'user' => $this->session->userdata('user')
+			'user' => $this->session->userdata('user'),
+			'items' => $this->Item_model->getItems()
 		);
 		
 		$data['title']['title'] = "Shop";
 		
-		$this->load->view('game', $data);
-	}
-	
-	function buy() {
 		
-		
+		$this->load->view('shop', $data);
 	}
-	
+
 }
 
 ?>

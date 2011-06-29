@@ -46,7 +46,7 @@ class Login extends CI_Controller {
 			if ($user != null) {
 			
 				$this->session->set_userdata('user', $user);
-				redirect('/game');
+				redirect('/shack');
 				
 			} else {
 			
@@ -54,6 +54,13 @@ class Login extends CI_Controller {
 			}
 			
 		}
+	}
+	
+	function logout() {
+	
+		$this->session->unset_userdata('user');
+		
+		redirect('/login');
 	}
 	
 	
