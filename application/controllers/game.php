@@ -22,11 +22,6 @@ class Game extends CI_Controller {
 		$this->load->view('game', $data);
 	}
 	
-	function buy() {
-		
-		
-	}
-	
 }
 
 ?>

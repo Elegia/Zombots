@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/game.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/login.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/shop.css"/>
 
 <title><?php echo $title; ?></title>
 </head>

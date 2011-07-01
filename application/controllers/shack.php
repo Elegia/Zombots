@@ -13,8 +13,13 @@ class Shack extends CI_Controller {
 	
 	function index() {
 		
+		$this->load->model('User_model');
+		
+		
+		$user = $this->User_model->getUserById($this->session->userdata('user_id'));
+		
 		$data = array(
-			'user' => $this->session->userdata('user')
+			'user' => $user
 		);
 		
 		$data['title']['title'] = "Shack";

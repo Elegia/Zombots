@@ -2,7 +2,7 @@
 
 <div id="header" class="header">
 	<p>
-	<?php echo $user['username']; ?>'s shack.
+	<?php echo $user->username; ?>'s shack.
 	</p>
 </div>
 

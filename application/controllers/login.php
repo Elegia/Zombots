@@ -45,7 +45,7 @@ class Login extends CI_Controller {
 			$user = $this->User_model->validateUser($username, $password);
 			if ($user != null) {
 			
-				$this->session->set_userdata('user', $user);
+				$this->session->set_userdata('user_id', $user['user_id']);
 				redirect('/shack');
 				
 			} else {
@@ -58,7 +58,7 @@ class Login extends CI_Controller {
 	
 	function logout() {
 	
-		$this->session->unset_userdata('user');
+		$this->session->sess_destroy();
 		
 		redirect('/login');
 	}

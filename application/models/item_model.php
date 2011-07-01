@@ -26,6 +26,19 @@ class Item_model extends CI_Model {
 		
 		return $items;
 	}
+	
+	function getItemById($item_id) {
+		
+		$query = $this->db->get_where('item', array('item_id' => $item_id));
+		
+		if ($query->num_rows() == 1) {
+			
+			$item = $query->row(0);
+		}
+		
+		
+		return $item;
+	}
 }
 
 ?>

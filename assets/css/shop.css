@@ -1,0 +1,46 @@
+.header {
+	position: relative;
+	float: left;
+	margin-bottom:
+}
+
+.shop_form {
+	position: relative;
+	clear: both;
+	float: left;
+	margin-top: 10px;
+}
+
+.shop_field {
+	clear: both;
+	float: left;
+	margin-top: 10px;
+	height: 50px;
+}
+
+.shop_field_info {
+	float: left;
+	width: 150px;
+}
+
+.shop_field_title {
+	float: left;
+	clear: both;
+	margin-right: 10px;
+	margin-top: 2px;
+}
+
+.shop_field_price {
+	float: left;
+	clear: both;
+	width: 150px;
+}
+
+.shop_field_input {
+	float: left;
+}
+
+.shop_field_submit {
+	float: left;
+	margin-left: 10px;
+}

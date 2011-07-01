@@ -9,6 +9,18 @@
 	</p>
 </div>
 
+<!-- Last bought -->
+
+<div id="last_bought" class="info_field">
+<?php 
+	if ($this->session->flashdata('last_bought') != null) {
+	
+		echo $this->session->flashdata('last_bought');
+	}
+?>
+</div>
+
+
 <!-- Shop form -->
 
 <?php foreach($items as $item) { ?>
@@ -19,16 +31,21 @@
 	
 	<div id="shop_field_turret" class="shop_field">
 	
-		<div id="shop_field_turret_name" class="shop_field_title">
-			<?php echo $item->item_name; ?></br>
-			Price: $<?php echo $item->item_price; ?>
+		<div id="shop_field_turret_info" class="shop_field_info">
+			<div id="shop_field_turret_name" class="shop_field_title">
+				<?php echo $item->item_name; ?>
+			</div>
+			
+			<div id="shop_field_turret_price" class="shop_field_price">
+				Price: $<?php echo $item->item_price; ?>
+			</div>
 		</div>
 		
 		<div id="shop_field_turret_input" class="shop_field_input">
 			<?php
 				$data = array(
-			          'name'        => $item->item_name,
-			          'id'          => $item->item_name,
+			          'name'        => 'item_amount',
+			          'id'          => 'item_amount',
 			          'value'       => '',
 			          'maxlength'   => '100',
 			          'class'		=> 'login_field_input',
@@ -37,19 +54,19 @@
 				echo form_input($data);
 			?>
 		</div>
-	</div>
-	
-	<div id="shop_field_submit" class="shop_field">
-	
-		<div id="shop_field_submit_title" class="shop_field_title">
-		</div>
-		<div id="shop_field_submit_button" class="shop_field_input">
+		
+		<div id="shop_field_submit_button" class="shop_field_submit">
 			<?php
 				echo form_submit('submit_login', 'Buy');
 			?>
 		</div>
+		
+		
+		<!-- Hidden data fields -->
+		<?php echo form_hidden('item_id', $item->item_id); ?>
+		
 	</div>
-	
+
 	<?php echo form_close(); ?>
 </div>
 
