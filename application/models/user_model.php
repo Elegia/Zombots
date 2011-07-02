@@ -38,6 +38,13 @@ class User_model extends CI_Model {
 		}
 	}
 	
+	function getAllUsers() {
+	
+		$query = $this->db->get('user');
+		
+		return $query;
+	}
+	
 	function getUserById($user_id) {
 	
 		$query = $this->db->get_where('user', array('user_id' => $user_id));

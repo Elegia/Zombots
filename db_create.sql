@@ -33,7 +33,7 @@ CREATE TABLE item
 CREATE TABLE inventory
 (
 	inventory_id int unsigned not null auto_increment primary key,
-	user_id int unsigned unique not null,
+	user_id int unsigned not null,
 	item_id int unsigned not null,
 	amount int unsigned not null,
   	foreign key (user_id) REFERENCES user(user_id),
