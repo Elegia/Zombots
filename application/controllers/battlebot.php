@@ -18,7 +18,7 @@ class Battlebot extends CI_Controller {
 	
 	function attack() {
 	
-		$updatedItems = array();
+		$removedItems = array();
 		
 		$this->load->model('User_model');
 		$this->load->model('Inventory_model');
@@ -71,14 +71,10 @@ class Battlebot extends CI_Controller {
 			
 			$inventory = $this->Inventory_model->getAllInventoryItems($user->user_id);
 			foreach ($inventory->result() as $inventory_item) {
-			
-				$item = $this->Item_model->getItemById($inventory_item->item_id);
 				
-				for ($i = 0; $i < $inventory_item->amount; $i++) {
-					$items[] = $item;
-				}			
+				$items[] = $inventory_item;			
 				
-				$totalPlayerHealth += $item->item_health;
+				$totalPlayerHealth += $inventory_item->item_health;
 			}
 			
 			echo 'Player defense structures:<br/>';
@@ -108,12 +104,18 @@ class Battlebot extends CI_Controller {
 					
 					$totalPlayerHealth -= $zombie['damage'];
 					$target->item_health -= $zombie['damage'];
+					
+					echo 'Zombie attacked turret for '.$zombie['damage'].' damage.<br />';
+					echo 'Turret health left: '.$target->item_health.'<br />';
+					
 					if ($target->item_health <= 0) {
 						
 						// Target was destroyed. Remove it from the battle
-						$updatedItems[] = $target;
+						$removedItems[] = $target;
 						unset($items[$index]);
 						$items = array_values($items);
+						
+						echo 'Turret was destroyed.<br />';
 					}
 					
 					
@@ -132,11 +134,17 @@ class Battlebot extends CI_Controller {
 					
 					$totalZombieHealth -= $item->item_damage;
 					$target['health'] -= $item->item_damage;
+					
+					echo 'Turret attacked zombie for '.$item->item_damage.' damage.<br />';
+					echo 'Zombie health left: '.$target['health'].'<br />';
+					
 					if ($target['health'] <= 0) {
 					
 						// Target was destroyed. Remove it from battle
 						unset($zombies[$index]);
 						$zombies = array_values($zombies);
+						
+						echo 'Zombie was killed.<br />';
 					}
 				}
 				
@@ -154,16 +162,21 @@ class Battlebot extends CI_Controller {
 			
 			// Write the updated items back to the database
 			
-			foreach ($updatedItems as $item) {
-		
-				if ($item->item_health <= 0) {
-				
-					$this->Inventory_model->removeItem($user->user_id, $item);
-				}
+			foreach ($items as $inventory_item) {
+					
+				$this->Inventory_model->updateItem($inventory_item);
 			}
 			
+			// Remove the destroyed items from the database
+			
+			foreach ($removedItems as $inventory_item) {
+				
+				$this->Inventory_model->removeItem($inventory_item->inventory_id);				
+			}
 			
 			// Fill in the battle log
+			
+			
 		}
 	}
 }

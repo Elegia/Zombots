@@ -5,7 +5,9 @@ class Inventory_model extends CI_Model {
 	var $inventory_id = '';
 	var $user_id = '';
 	var $item_id = '';
-	var $amount = '';
+	var $item_health = '';
+	var $item_damage = '';
+	var $item_defense = '';
 	
 	function __construct() {
 	
@@ -18,49 +20,31 @@ class Inventory_model extends CI_Model {
 		return $query;
 	}
 	
-	function updateItems($user_id, $items) {
+	function updateItem($inventory_item) {
 	
-		foreach ($items as $item) {
-		
-			
-			$this->db->where('inventory', array('user_id' => $user_id, 'item_id' => $item->item_id));
-			$this->db->update('inventory', $item);
-		}
+		$this->db->where('inventory_id', $inventory_item->inventory_id);
+		$this->db->update('inventory', $inventory_item);
 	}
 	
-	function removeItem($user_id, $item) {
+	function removeItem($inventory_id) {
 		
-		$this->db->where('inventory', array('user_id' => $user_id, 'item_id' => $item->item_id));
+		$this->db->where('inventory_id', $inventory_id);
 		$this->db->delete('inventory');
 	}
 	
 	function buy($user, $item, $amount) {
 	
-		$query = $this->db->get_where('inventory', array('user_id' => $user->user_id, 'item_id' => $item->item_id));
+		for ($i = 0; $i < $amount; $i++) {
 		
-		if ($query->num_rows() == 1) {
-			
-			// We already own one or more instances of this item, so update the row
-			$inventory = $query->row(0);
-			
-			$data = array(
-               'amount' => $inventory->amount + $amount
-            );
-
-			$this->db->where('inventory_id', $inventory->inventory_id);
-			$this->db->update('inventory', $data);
-			
-		} else {
-			
-			// We don't have an instance of this item in our inventory yet. Create it.
-			
 			$data = array(
 			   'inventory_id' => 0,
 			   'user_id' => $user->user_id ,
 			   'item_id' => $item->item_id,
-			   'amount' => $amount
+			   'item_health' => $item->item_health,
+			   'item_damage' => $item->item_damage,
+			   'item_defense' => $item->item_defense
 			);
-			
+				
 			$this->db->insert('inventory', $data); 
 		}
 	}

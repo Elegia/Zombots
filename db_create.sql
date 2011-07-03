@@ -9,6 +9,7 @@ CREATE USER 'zombotdb'@'localhost' IDENTIFIED BY 'zombotdbpass';
 GRANT SELECT ON zombots_dev.* TO 'zombotdb'@'localhost';
 GRANT UPDATE ON zombots_dev.* TO 'zombotdb'@'localhost';
 GRANT INSERT ON zombots_dev.* TO 'zombotdb'@'localhost';
+GRANT DELETE ON zombots_dev.* TO 'zombotdb'@'localhost';
 
 CREATE TABLE user 
 (
@@ -35,7 +36,9 @@ CREATE TABLE inventory
 	inventory_id int unsigned not null auto_increment primary key,
 	user_id int unsigned not null,
 	item_id int unsigned not null,
-	amount int unsigned not null,
+	item_health int not null,
+	item_damage int not null,
+	item_defense int not null,
   	foreign key (user_id) REFERENCES user(user_id),
   	foreign key (item_id) REFERENCES item(item_id)
 );
@@ -60,4 +63,4 @@ INSERT INTO item VALUES(0, 'Cannon', 1000, 400, 100, 0);
 
 
 # Add sample inventory entries
-INSERT INTO inventory VALUES(0, 1, 1, 2);
+INSERT INTO inventory VALUES(0, 1, 1, 250, 10, 0);
