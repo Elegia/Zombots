@@ -46,9 +46,9 @@ CREATE TABLE inventory
 CREATE TABLE battle
 (
 	battle_id int unsigned not null auto_increment primary key,
-	user_id int unsigned unique not null,
-	player_damage int unsigned not null,
-	zombie_damage int unsigned not null,
+	user_id int unsigned not null,
+  zombie_amount int unsigned not null,
+  full_log text not null,
 	won boolean not null,
   	foreign key (user_id) REFERENCES user(user_id)
 );
