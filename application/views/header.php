@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/game.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/battlelog.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/login.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/shop.css"/>
 
@@ -26,7 +26,7 @@
 	
 	<div id="navigation_item" class="navigation_item">
 	
-		<a href="<?php echo site_url("log"); ?>">Battle log</a>
+		<a href="<?php echo site_url("battlelog"); ?>">Battle log</a>
 		
 	</div>
 	

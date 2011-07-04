@@ -7,6 +7,7 @@ class Battle_model extends CI_Model {
 	var $zombie_amount = '';
 	var $full_log = '';
 	var $won = '';
+	var $date = '';
 	
 	function __construct() {
 	
@@ -20,10 +21,18 @@ class Battle_model extends CI_Model {
 		   'user_id' => $user_id,
 		   'zombie_amount' => $zombie_amount,
 		   'full_log' => $full_log,
-		   'won' => $won
+		   'won' => $won,
+		   'date' => date('Y-m-d')
 		);
 			
 		$this->db->insert('battle', $data); 
+	}
+	
+	function getBattleHistory($user_id) {
+	
+		$this->db->order_by("date", "desc");
+		$query = $this->db->get_where('battle', array('user_id' => $user_id));
+		return $query;
 	}
 }
 
