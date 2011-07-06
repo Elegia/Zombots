@@ -14,11 +14,15 @@ class Shop extends CI_Controller {
 	function index() {
 
 		$this->load->model('Item_model');
+		$this->load->model('Inventory_model');
 
-		
+		$user_id = $this->session->userdata('user_id');
+
+		$items_repair_cost = $this->Inventory_model->calculateRepairCost($user_id);
+				
 		$data = array(
-			'user' => $this->session->userdata('user'),
-			'items' => $this->Item_model->getItems()
+			'items' => $this->Item_model->getItems(),
+			'items_repair_cost' => $items_repair_cost
 		);
 		
 		$data['title']['title'] = "Shop";
@@ -60,6 +64,26 @@ class Shop extends CI_Controller {
 		$data['title']['title'] = "Shop";
 
 		redirect('/shop');
+	}
+	
+	function repair() {
+		
+		$this->load->model('Inventory_model');
+		$this->load->model('User_model');
+		
+		$user = $this->User_model->getUserById($this->session->userdata('user_id'));
+		
+		if (isset($_POST['items_repair_cost'])) {
+		
+			$repair_cost = $_POST['items_repair_cost'];
+			
+			$this->Inventory_model->repairAll($user->user_id);
+			$this->User_model->spend($user, $repair_cost);
+			
+			$this->session->set_flashdata('last_repaired', 'All your items are repaired.');
+		}
+		
+		redirect('/shop/index');
 	}
 }
 

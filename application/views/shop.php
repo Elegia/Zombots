@@ -20,6 +20,19 @@
 ?>
 </div>
 
+<!-- Repair form -->
+
+<div id="repair_form" class="shop_form">
+	<?php echo form_open('shop/repair'); ?>
+		<div id="repair_submit_button" class="shop_field_submit">
+			<?php echo form_submit('submit_repair', 'Repair all ('.$items_repair_cost.'$)'); ?>
+		</div>
+		
+		<!-- Hidden data fields -->
+		<?php echo form_hidden('items_repair_cost', $items_repair_cost); ?>
+		
+	<?php echo form_close(); ?>
+</div>
 
 <!-- Shop form -->
 

@@ -6,5 +6,15 @@
 	</p>
 </div>
 
+<?php foreach($items as $item) { ?>
+
+	<div id=<?php echo 'item'.$item->item_id; ?> class="">
+	
+		<?php echo $item->item_name; ?>
+		
+	</div>	
+	
+<?php } ?>
+
 </body>
 </html>
