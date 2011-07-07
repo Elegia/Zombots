@@ -51,6 +51,7 @@ CREATE TABLE battle
   	zombie_amount int unsigned not null,
   	full_log text not null,
 	won boolean not null,
+	date DATE not null,
   	foreign key (user_id) REFERENCES user(user_id)
 );
 
