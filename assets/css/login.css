@@ -21,3 +21,13 @@
 .login_field_input {
 	float: left;
 }
+
+.login_textfield {
+	float: left;
+	outline: none;
+	font-family: 'Love Ya Like A Sister', Lucida Grande, Verdana, Sans-serif;
+ 	font-size: 14px;
+	color: #cc0000;
+ 	background: black;
+ 	border: 1px solid #4F5155;
+}

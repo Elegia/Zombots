@@ -5,6 +5,7 @@ class Inventory_model extends CI_Model {
 	var $inventory_id = '';
 	var $user_id = '';
 	var $item_id = '';
+	var $item_name = '';
 	var $item_max_health = '';
 	var $item_health = '';
 	var $item_damage = '';
@@ -41,6 +42,7 @@ class Inventory_model extends CI_Model {
 			   'inventory_id' => 0,
 			   'user_id' => $user->user_id ,
 			   'item_id' => $item->item_id,
+			   'item_name' => $item->item_name,
 			   'item_max_health' => $item->item_health,
 			   'item_health' => $item->item_health,
 			   'item_damage' => $item->item_damage,

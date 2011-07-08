@@ -5,7 +5,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/battlelog.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/login.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/shop.css"/>
-
+<link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&v2' rel='stylesheet' type='text/css'>
 <title><?php echo $title; ?></title>
 </head>
 <body>

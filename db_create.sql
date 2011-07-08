@@ -36,6 +36,7 @@ CREATE TABLE inventory
 	inventory_id int unsigned not null auto_increment primary key,
 	user_id int unsigned not null,
 	item_id int unsigned not null,
+	item_name varchar(255) not null,
 	item_max_health int not null,
 	item_health int not null,
 	item_damage int not null,
@@ -65,4 +66,4 @@ INSERT INTO item VALUES(0, 'Cannon', 1000, 400, 100, 0);
 
 
 # Add sample inventory entries
-INSERT INTO inventory VALUES(0, 1, 1, 250, 250, 10, 0);
+INSERT INTO inventory VALUES(0, 1, 1, 'Beginner\'s turret', 250, 250, 10, 0);

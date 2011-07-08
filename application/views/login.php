@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link href='http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister&v2' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/style.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/css/login.css"/>
 
@@ -45,7 +46,7 @@
 			          'id'          => 'username',
 			          'value'       => $old_username,
 			          'maxlength'   => '100',
-			          'class'		=> 'login_field_input',
+			          'class'		=> 'login_textfield',
 			        );
 		
 				echo form_input($data);
@@ -65,7 +66,7 @@
 			          'id'          => 'password',
 			          'value'       => '',
 			          'maxlength'   => '100',
-			          'class'		=> 'login_field_input',
+			          'class'		=> 'login_textfield',
 			        );
 		
 				echo form_password($data);
