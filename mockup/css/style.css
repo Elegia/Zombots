@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #999999;
+  width: 100%;
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #303328), color-stop(0.8, #0a0a0a));
+  background: #bfa730;
+}
+.header {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+  height: 60px;
+  background: #ffde40;
+  border-bottom: 2px solid black;
+}
+.header .header_left {
+  float: left;
+  width: 40%;
+  height: 60px;
+  font-family: 'Lucida Grande';
+  font-size: 24px;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c10a0a), color-stop(0.8, #700a09));
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-bottom-right-radius: 40px 30px;
+  -moz-border-bottom-right-radius: 40px 30px;
+}
+.header .header_right {
+  float: left;
+  margin-left: 20px;
+  width: 50%;
+  height: 60px;
+  background: #ffde40;
+  border-bottom: 2px solid black;
+}
+.header .header_right .resource_food {
+  float: left;
+  width: 8%;
+  margin-right: 5%;
+  margin-top: 3%;
+  color: black;
+}
+.header .header_right .resource_crude_metal {
+  float: left;
+  width: 8%;
+  margin-right: 5%;
+  margin-top: 3%;
+  color: black;
+}
+.header .header_right .resource_bar_metal {
+  float: left;
+  width: 8%;
+  margin-right: 5%;
+  margin-top: 3%;
+  color: black;
+}
+.header .header_right .resource_energy {
+  float: left;
+  width: 8%;
+  margin-right: 5%;
+  margin-top: 3%;
+  color: black;
+}

@@ -1,0 +1,85 @@
+@color: #999999;
+@body_gradient_top: #303328;
+@body_gradient_bottom: #0a0a0a;
+@header_background: #ffde40;
+@header_left_gradient_top: #c10a0a;
+@header_left_gradient_bottom: #700a09;
+
+body {
+	margin: 0;
+	padding: 0;
+	color: @color;
+	width: 100%;
+	height: 100%;
+
+	background-image: -webkit-gradient(
+	    linear,
+	    left top,
+	    left bottom,
+	    color-stop(0.0, @body_gradient_top),
+	    color-stop(0.8, @body_gradient_bottom)
+	);
+	
+	background: #bfa730;
+}
+
+.header {
+	position: relative;
+	float: left;
+	clear: both;
+	width: 100%;
+	height: 60px;
+	background: @header_background;
+	border-bottom: 2px solid black;
+	
+	.header_left {
+		float: left;
+		width: 40%;
+		height: 60px;
+		
+		font-family: 'Lucida Grande';
+		font-size: 24px;
+		
+		background-image: -webkit-gradient(
+		    linear,
+		    left top,
+		    left bottom,
+		    color-stop(0.0, @header_left_gradient_top),
+		    color-stop(0.8, @header_left_gradient_bottom)
+		);
+		border-bottom: 2px solid black;
+		border-right: 2px solid black;
+		border-bottom-right-radius: 40px 30px;
+		-moz-border-bottom-right-radius: 40px 30px;
+	}
+	
+	.header_right {
+		float: left;
+		margin-left: 20px;
+		width: 50%;
+		height: 60px;
+		background: @header_background;
+		border-bottom: 2px solid black;
+		
+		.resource_food {
+			float: left;
+			width: 8%;
+			margin-right: 5%;
+			margin-top: 3%;
+			
+			color: black;
+		}
+		
+		.resource_crude_metal {
+			.resource_food;
+		}
+		
+		.resource_bar_metal {
+			.resource_food;
+		}
+		
+		.resource_energy {
+			.resource_food;
+		}
+	}
+}
